@@ -29,27 +29,19 @@ echo "Original audio file copied to $AUDIO_DIR/original.mp3"
 echo "Splitting audio into segments..."
 
 # Extract segment 1 (0:00 to 0:54)
-ffmpeg -i "$AUDIO_DIR/original.mp3" -ss 0 -to 54 -c copy "$TEMP_DIR/segment1.mp3"
+ffmpeg -y -i "$AUDIO_DIR/original.mp3" -ss 0 -to 54 -c copy "$TEMP_DIR/segment1.mp3"
 
 # Extract segment 2 (0:58 to end)
-ffmpeg -i "$AUDIO_DIR/original.mp3" -ss 58 -c copy "$TEMP_DIR/segment2.mp3"
+ffmpeg -y -i "$AUDIO_DIR/original.mp3" -ss 58 -c copy "$TEMP_DIR/segment2.mp3"
 
 echo "Audio segments extracted"
-
-# Process segment 1 to fix Ben Mak's voice (increase pitch and speed)
-echo "Processing segment 1 to fix Ben Mak's voice..."
-ffmpeg -i "$TEMP_DIR/segment1.mp3" -af "asetrate=44100*1.1,aresample=44100,atempo=0.95" "$TEMP_DIR/segment1_fixed.mp3"
-
-# Process segment 2 to fix Ben Mak's voice (increase pitch and speed)
-echo "Processing segment 2 to fix Ben Mak's voice..."
-ffmpeg -i "$TEMP_DIR/segment2.mp3" -af "asetrate=44100*1.1,aresample=44100,atempo=0.95" "$TEMP_DIR/segment2_fixed.mp3"
 
 # Increase volume of Richard's voice in both segments
 # This is a simplification as we can't easily separate voices without advanced tools
 # We'll use a compressor to boost quieter parts (which are likely Richard's voice)
 echo "Increasing volume of Richard's voice..."
-ffmpeg -i "$TEMP_DIR/segment1_fixed.mp3" -af "compand=0|0:1|1:-90/-900|-70/-70|-20/-9|0/-3:6:0:0:0" "$TEMP_DIR/segment1_volume.mp3"
-ffmpeg -i "$TEMP_DIR/segment2_fixed.mp3" -af "compand=0|0:1|1:-90/-900|-70/-70|-20/-9|0/-3:6:0:0:0" "$TEMP_DIR/segment2_volume.mp3"
+ffmpeg -y -i "$TEMP_DIR/segment1.mp3" -af "compand=0|0:1|1:-90/-900|-70/-70|-20/-9|0/-3:6:0:0:0" "$TEMP_DIR/segment1_volume.mp3"
+ffmpeg -y -i "$TEMP_DIR/segment2.mp3" -af "compand=0|0:1|1:-90/-900|-70/-70|-20/-9|0/-3:6:0:0:0" "$TEMP_DIR/segment2_volume.mp3"
 
 # Create a file list for concatenation
 echo "file '$TEMP_DIR/segment1_volume.mp3'" > "$TEMP_DIR/filelist.txt"
@@ -57,7 +49,7 @@ echo "file '$TEMP_DIR/segment2_volume.mp3'" >> "$TEMP_DIR/filelist.txt"
 
 # Concatenate the segments
 echo "Concatenating segments..."
-ffmpeg -f concat -safe 0 -i "$TEMP_DIR/filelist.txt" -c copy "$EDITED_AUDIO"
+ffmpeg -y -f concat -safe 0 -i "$TEMP_DIR/filelist.txt" -c copy "$EDITED_AUDIO"
 
 echo "Audio editing complete. Edited file saved to $EDITED_AUDIO"
 
