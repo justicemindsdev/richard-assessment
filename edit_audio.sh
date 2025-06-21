@@ -28,11 +28,11 @@ echo "Original audio file copied to $AUDIO_DIR/original.mp3"
 
 echo "Splitting audio into segments..."
 
-# Extract segment 1 (0:00 to 0:54)
-ffmpeg -y -i "$AUDIO_DIR/original.mp3" -ss 0 -to 54 -c copy "$TEMP_DIR/segment1.mp3"
+# Extract segment 1 (0:00 to 0:50)
+ffmpeg -y -i "$AUDIO_DIR/original.mp3" -ss 0 -to 50 -c copy "$TEMP_DIR/segment1.mp3"
 
-# Extract segment 2 (0:58 to end)
-ffmpeg -y -i "$AUDIO_DIR/original.mp3" -ss 58 -c copy "$TEMP_DIR/segment2.mp3"
+# Extract segment 2 (1:00 to end)
+ffmpeg -y -i "$AUDIO_DIR/original.mp3" -ss 60 -c copy "$TEMP_DIR/segment2.mp3"
 
 echo "Audio segments extracted"
 
