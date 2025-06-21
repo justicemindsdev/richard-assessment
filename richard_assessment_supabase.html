@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Behavior Assessment - Supabase Integration</title>
+    <link rel="stylesheet" href="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/richard-assessment/project/richard_assessment_styles.css">
+</head>
+<body>
+    <header>
+        <h1>BEHAVIOR ASSESSMENT REPORT</h1>
+        <p>Scientific Audio Analysis</p>
+    </header>
+    
+    <div class="container">
+        <div id="loading-indicator" class="loading-indicator">
+            Loading assessment data...
+        </div>
+        
+        <div id="error-message" class="error-message"></div>
+        
+        <div class="case-info">
+            <h2>CASE INFORMATION</h2>
+            <div class="case-info-grid">
+                <div class="case-info-item">
+                    <span class="case-info-label">Case Number:</span>
+                    <span id="case-number"></span>
+                </div>
+                <div class="case-info-item">
+                    <span class="case-info-label">Recording Date:</span>
+                    <span id="recording-date"></span>
+                </div>
+                <div class="case-info-item">
+                    <span class="case-info-label">Location:</span>
+                    <span id="location"></span>
+                </div>
+                <div class="case-info-item">
+                    <span class="case-info-label">Subject:</span>
+                    <span id="subject-name"></span>
+                    (<span id="subject-role"></span>)
+                </div>
+                <div class="case-info-item">
+                    <span class="case-info-label">Complainant:</span>
+                    <span id="complainant-name"></span>
+                    (<span id="complainant-role"></span>)
+                </div>
+                <div class="case-info-item">
+                    <span class="case-info-label">Concerning:</span>
+                    <span id="concerning"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="audio-controls">
+            <audio id="mainAudio" src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/richard-assessment/audio/richard-assessment.mp3" preload="auto"></audio>
+            <div>
+                <strong>Audio Controls:</strong> Click on any audio segment to play. The segment will loop until you click it again or click another segment.
+            </div>
+            <button id="stopAllAudioButton" class="stop-button">Stop All Audio</button>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">SCIENTIFIC AUDIO ANALYSIS</h2>
+            <p>The following analysis identifies specific linguistic and paralinguistic markers in the recording that constitute evidence of gaslighting, inappropriate affect, and deliberate dismissal of safeguarding concerns.</p>
+            
+            <div id="audio-segments-container">
+                <!-- Audio segments will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">GASLIGHTING TACTICS IDENTIFIED</h2>
+            <p>The following specific gaslighting tactics were identified in the recording:</p>
+            
+            <div id="gaslighting-tactics-container">
+                <!-- Gaslighting tactics will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">LEGAL IMPLICATIONS</h2>
+            
+            <div id="legal-implications-container">
+                <!-- Legal implications will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">MANDATORY REPORTING OBLIGATIONS</h2>
+            
+            <div id="reporting-obligations-container">
+                <!-- Reporting obligations will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <div id="clinical-trials-container">
+            <!-- Clinical trials will be dynamically inserted here -->
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">SUMMARY OF FINDINGS</h2>
+            <p>Scientific analysis identified the following pivotal moments in the recording where Richard's behavior meets clinical thresholds for workplace misconduct:</p>
+            
+            <div id="summary-points-container">
+                <!-- Summary points will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <script type="module">
+        // Set Supabase credentials directly for public access
+        window.SUPABASE_URL = 'https://tvecnfdqakrevzaeifpk.supabase.co';
+        window.SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR2ZWNuZmRxYWtyZXZ6YWVpZnBrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgzODIwNjQsImV4cCI6MjA2Mzk1ODA2NH0.q-8ukkJZ4FGSbZyEYp0letP-S58hC2PA6lUOWUH9H2Y';
+        
+        // Set audio source directly to Supabase storage URL
+        const audioElement = document.getElementById('mainAudio');
+        audioElement.src = 'https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/richard-assessment/audio/richard-assessment.mp3';
+        
+        import { loadAndRenderAssessment } from 'https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/richard-assessment/project/richard_assessment_supabase_client.js';
+        
+        // Load the assessment data when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Use the case number from the URL query parameter if available
+            const urlParams = new URLSearchParams(window.location.search);
+            const caseNumber = urlParams.get('case') || 'PL-WFH-062025'; // Default to Richard's case
+            
+            loadAndRenderAssessment(caseNumber);
+        });
+    </script>
+</body>
+</html>

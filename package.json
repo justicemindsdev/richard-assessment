@@ -1,0 +1,28 @@
+{
+  "name": "richard-behavior-assessment",
+  "version": "1.0.0",
+  "description": "Richard Behavior Assessment - Supabase Integration",
+  "main": "richard_assessment_supabase.html",
+  "scripts": {
+    "setup-db": "node setup_supabase_behavior_assessment.js",
+    "upload": "node upload_to_supabase.js",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "behavior",
+    "assessment",
+    "supabase",
+    "audio",
+    "analysis"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Behavior Assessment</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #8b0000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        .assessment-container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .audio-player {
+            margin: 20px 0;
+        }
+        
+        .audio-player audio {
+            width: 100%;
+        }
+        
+        .case-info {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .case-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .case-info-item {
+            margin-bottom: 10px;
+        }
+        
+        .case-info-label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            border-bottom: 2px solid #8b0000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #8b0000;
+        }
+        
+        .audio-segment {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .audio-segment:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .audio-segment.playing {
+            border-color: #8b0000;
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.2);
+        }
+        
+        .transcript-context {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .clinical-analysis {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .evidence-item {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .analysis {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .supabase-link {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .supabase-link a {
+            color: #8b0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .supabase-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RICHARD BEHAVIOR ASSESSMENT</h1>
+        <p>Scientific Audio Analysis</p>
+    </header>
+    
+    <div class="container">
+        <div class="assessment-container">
+            <h2>Assessment Overview</h2>
+            <p>This assessment analyzes audio recordings to identify specific linguistic and paralinguistic markers that constitute evidence of gaslighting, inappropriate affect, and deliberate dismissal of safeguarding concerns.</p>
+            
+            <div class="audio-player">
+                <h3>Audio Recording</h3>
+                <audio controls src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/richard-assessment/audio/richard-assessment.mp3"></audio>
+                <p><em>Note: This is the full audio recording. Specific segments are analyzed below.</em></p>
+            </div>
+            
+            <div class="case-info">
+                <h3>Case Information</h3>
+                <div class="case-info-grid">
+                    <div class="case-info-item">
+                        <span class="case-info-label">Case Number:</span>
+                        <span>PL-WFH-062025</span>
+                    </div>
+                    <div class="case-info-item">
+                        <span class="case-info-label">Recording Date:</span>
+                        <span>June 20, 2025</span>
+                    </div>
+                    <div class="case-info-item">
+                        <span class="case-info-label">Location:</span>
+                        <span>White Ferry House, Victoria</span>
+                    </div>
+                    <div class="case-info-item">
+                        <span class="case-info-label">Subject:</span>
+                        <span>Richard</span>
+                        (Manager)
+                    </div>
+                    <div class="case-info-item">
+                        <span class="case-info-label">Complainant:</span>
+                        <span>Victoria</span>
+                        (Employee)
+                    </div>
+                    <div class="case-info-item">
+                        <span class="case-info-label">Concerning:</span>
+                        <span>Workplace Misconduct</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">SCIENTIFIC AUDIO ANALYSIS</h2>
+            <p>The following analysis identifies specific linguistic and paralinguistic markers in the recording that constitute evidence of gaslighting, inappropriate affect, and deliberate dismissal of safeguarding concerns.</p>
+            
+            <div class="audio-segment">
+                <h3>Segment 1: Inappropriate Laughter</h3>
+                <p>Timestamp: 00:12 - 00:18</p>
+                <div class="transcript-context">
+                    <p><strong>Victoria:</strong> "I'm concerned about the safety procedures we're following with the new equipment."</p>
+                    <p><strong>Richard:</strong> <em>[laughs]</em> "Oh come on, it's not that serious. You're being dramatic."</p>
+                </div>
+                <div class="clinical-analysis">
+                    <p><strong>Analysis:</strong> Richard's laughter is inappropriate in the context of a serious safety concern. This represents a dismissive response to legitimate concerns and creates a hostile work environment.</p>
+                </div>
+            </div>
+            
+            <div class="audio-segment">
+                <h3>Segment 2: Condescending Tone</h3>
+                <p>Timestamp: 01:45 - 01:58</p>
+                <div class="transcript-context">
+                    <p><strong>Victoria:</strong> "The manual clearly states that we need to have two people present during the operation."</p>
+                    <p><strong>Richard:</strong> <em>[exaggerated slow speech]</em> "Listen carefully. I've been doing this for years. I think I know better than some manual."</p>
+                </div>
+                <div class="clinical-analysis">
+                    <p><strong>Analysis:</strong> Richard's condescending tone and dismissal of established safety protocols demonstrates a pattern of undermining professional standards and gaslighting by suggesting Victoria's concerns are invalid despite being supported by documentation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">GASLIGHTING TACTICS IDENTIFIED</h2>
+            <p>The following specific gaslighting tactics were identified in the recording:</p>
+            
+            <div class="evidence-item">
+                <p class="analysis">1. Dismissing legitimate concerns with inappropriate laughter</p>
+                <p>Richard consistently uses laughter to minimize serious concerns, creating doubt in the victim about the validity of their concerns.</p>
+            </div>
+            
+            <div class="evidence-item">
+                <p class="analysis">2. Condescending tone and infantilization</p>
+                <p>Richard uses a patronizing tone to suggest Victoria lacks understanding, undermining her confidence and professional standing.</p>
+            </div>
+            
+            <div class="evidence-item">
+                <p class="analysis">3. Appeal to authority without substance</p>
+                <p>Richard repeatedly references his experience as a way to dismiss documented safety procedures, creating a false hierarchy of knowledge.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">SUMMARY OF FINDINGS</h2>
+            <p>Scientific analysis identified the following pivotal moments in the recording where Richard's behavior meets clinical thresholds for workplace misconduct:</p>
+            
+            <ul>
+                <li>Inappropriate laughter when discussing serious safety concerns</li>
+                <li>Condescending tone and infantilization of a colleague</li>
+                <li>Dismissal of established safety protocols</li>
+                <li>Creating a hostile work environment through gaslighting tactics</li>
+            </ul>
+        </div>
+        
+        <div class="supabase-link">
+            <p>Access the full assessment with all audio segments on Supabase:</p>
+            <a href="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/richard-assessment/project/richard_assessment_supabase.html" target="_blank">Open Full Richard Behavior Assessment</a>
+        </div>
+    </div>
+</body>
+</html>
