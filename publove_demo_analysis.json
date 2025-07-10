@@ -1,0 +1,35 @@
+{
+  "company": {
+    "name": "PUB LOVE LTD",
+    "number": "06469931",
+    "analysisDate": "2025-07-08T08:23:56.019Z"
+  },
+  "summary": {
+    "status": "Active and compliant",
+    "riskLevel": "Low",
+    "businessModel": "Pub-hostel hybrid in London",
+    "keyStrengths": [
+      "Innovative business model",
+      "Prime London locations",
+      "Award-winning food offerings",
+      "Established brand presence"
+    ]
+  },
+  "financials": {
+    "revenue": "$10 million (estimated)",
+    "employees": 36,
+    "profitMargin": "15-20% (industry average)",
+    "outgoings": {
+      "staffCosts": "$3.5-4 million",
+      "foodBeverage": "$2.5-3 million",
+      "property": "$1.5-2 million",
+      "other": "$0.5-1 million"
+    }
+  },
+  "recommendations": [
+    "Obtain full filed accounts for detailed financial analysis",
+    "Monitor for any new legal filings or claims",
+    "Track expansion plans and new property acquisitions",
+    "Analyze customer reviews and social media presence"
+  ]
+}

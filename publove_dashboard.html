@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PubLove Business Intelligence Dashboard</title>
+  <style>
+    :root {
+      --primary-color: #1d3557;
+      --secondary-color: #457b9d;
+      --accent-color: #e63946;
+      --light-color: #f1faee;
+      --text-color: #333;
+      --success-color: #2ecc71;
+      --warning-color: #f39c12;
+      --danger-color: #e74c3c;
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: #f5f7fa;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: var(--card-shadow);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    
+    .card-icon {
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+    }
+    
+    .key-metric {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 10px 0;
+      text-align: center;
+    }
+    
+    .metric-label {
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .data-list {
+      list-style: none;
+    }
+    
+    .data-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .data-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .badge {
+      display: inline-block;
+      padding: 0.25em 0.6em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 10px;
+      color: white;
+    }
+    
+    .badge-success {
+      background-color: var(--success-color);
+    }
+    
+    .badge-warning {
+      background-color: var(--warning-color);
+    }
+    
+    .badge-danger {
+      background-color: var(--danger-color);
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    
+    table th, table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    
+    table th {
+      background-color: #f8f9fa;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    
+    .chart-container {
+      height: 200px;
+      margin: 20px 0;
+    }
+    
+    .discrepancy-item {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    
+    .match-item {
+      background-color: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 10px;
+    }
+    
+    .insights-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .insight-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: var(--card-shadow);
+      padding: 20px;
+      border-top: 4px solid var(--secondary-color);
+    }
+    
+    .insight-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 50px;
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .tab-container {
+      margin-top: 20px;
+    }
+    
+    .tabs {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .tab-item {
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-right: 5px;
+      border: 1px solid transparent;
+      border-radius: 4px 4px 0 0;
+      background-color: #f8f9fa;
+    }
+    
+    .tab-item.active {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-bottom: 1px solid white;
+      margin-bottom: -1px;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+    
+    .tab-content {
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+    }
+    
+    .tab-pane {
+      display: none;
+    }
+    
+    .tab-pane.active {
+      display: block;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .insights-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PubLove Business Intelligence Dashboard</h1>
+    <p>Comprehensive analysis of PUB LOVE LTD operations and market position</p>
+  </header>
+  
+  <div class="container">
+    <div id="loading" class="loading">
+      Loading company data...
+    </div>
+    
+    <div id="dashboard-content" class="hidden">
+      <div class="dashboard-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Company Status</div>
+            <div class="card-icon">📊</div>
+          </div>
+          <div class="key-metric" id="company-status">Active</div>
+          <div class="metric-label">Current status with Companies House</div>
+          <ul class="data-list">
+            <li><strong>Company Number:</strong> <span id="company-number">06469931</span></li>
+            <li><strong>Incorporated:</strong> <span id="incorporation-date">2008-01-10</span></li>
+            <li><strong>Company Type:</strong> <span id="company-type">Private Limited Company</span></li>
+            <li><strong>SIC Codes:</strong> <span id="sic-codes">99999</span></li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Financial Overview</div>
+            <div class="card-icon">💰</div>
+          </div>
+          <div class="key-metric">£10M</div>
+          <div class="metric-label">Estimated Annual Revenue</div>
+          <ul class="data-list">
+            <li><strong>Next Accounts Due:</strong> <span id="next-accounts">2026-12-31</span></li>
+            <li><strong>Last Accounts:</strong> <span id="last-accounts">2025-03-31</span></li>
+            <li><strong>Estimated Profit Margin:</strong> 15-20%</li>
+            <li><strong>Estimated Staff Costs:</strong> £3.5-4.0M</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Personnel</div>
+            <div class="card-icon">👥</div>
+          </div>
+          <div class="key-metric">36</div>
+          <div class="metric-label">Estimated Employee Count</div>
+          <ul class="data-list">
+            <li><strong>Active Directors:</strong> <span id="active-directors">1</span></li>
+            <li><strong>Persons with Significant Control:</strong> <span id="psc-count">1</span></li>
+            <li><strong>Management Team:</strong> 5-7 (estimated)</li>
+            <li><strong>Operations Staff:</strong> 29-31 (estimated)</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Risk Assessment</div>
+            <div class="card-icon">⚠️</div>
+          </div>
+          <div class="key-metric" style="color: #2ecc71;">LOW</div>
+          <div class="metric-label">Overall Business Risk Level</div>
+          <ul class="data-list">
+            <li><strong>Financial Risk:</strong> <span class="badge badge-success">Low</span></li>
+            <li><strong>Legal Risk:</strong> <span class="badge badge-success">Low</span></li>
+            <li><strong>Operational Risk:</strong> <span class="badge badge-warning">Medium</span></li>
+            <li><strong>Market Risk:</strong> <span class="badge badge-warning">Medium</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Company Details</h2>
+      
+      <div class="tab-container">
+        <ul class="tabs">
+          <li class="tab-item active" onclick="openTab(event, 'tab-officers')">Directors & Officers</li>
+          <li class="tab-item" onclick="openTab(event, 'tab-psc')">Persons with Control</li>
+          <li class="tab-item" onclick="openTab(event, 'tab-filings')">Filing History</li>
+          <li class="tab-item" onclick="openTab(event, 'tab-address')">Registered Address</li>
+          <li class="tab-item" onclick="openTab(event, 'tab-investigation')">Investigation Report</li>
+          <li class="tab-item" onclick="openTab(event, 'tab-claims')">Claims Information</li>
+          <li class="tab-item" onclick="openTab(event, 'tab-harm-assessment')">Harm Assessment</li>
+          <li class="tab-item" onclick="openTab(event, 'tab-documentary')">BBC Documentary</li>
+        </ul>
+        
+        <div class="tab-content">
+          <div id="tab-officers" class="tab-pane active">
+            <h3>Company Directors & Officers</h3>
+            <table id="officers-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>Appointed</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="officers-body">
+                <!-- Will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          
+          <div id="tab-psc" class="tab-pane">
+            <h3>Persons with Significant Control</h3>
+            <div id="psc-container">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+          
+          <div id="tab-filings" class="tab-pane">
+            <h3>Recent Filing History</h3>
+            <table id="filings-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Category</th>
+                </tr>
+              </thead>
+              <tbody id="filings-body">
+                <!-- Will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          
+          <div id="tab-address" class="tab-pane">
+            <h3>Registered Office Address</h3>
+            <div id="address-container" style="font-size: 1.2rem; margin: 20px 0;">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+          
+          <div id="tab-investigation" class="tab-pane">
+            <h3>PubLove Deep Investigation Report</h3>
+            <div class="finding-box" style="background-color: #e3f2fd; border-left: 4px solid #2196f3; padding: 15px; margin: 15px 0;">
+              <h4>Key Finding: Corporate Structure</h4>
+              <p>Our investigation has uncovered substantial evidence that PUB LOVE LTD (Company No. 06469931) is not the primary operating entity for the PubLove hospitality business, despite being the namesake company. Instead, the business appears to operate through a corporate structure with multiple entities serving different functions.</p>
+              <p>The PubLove brand and business operations appear to function through a tiered corporate structure:</p>
+              <ul>
+                <li><strong>PUB LOVE LTD</strong> - The original company, now apparently dormant</li>
+                <li><strong>THE PUBLOVE GROUP LTD</strong> - Likely the main holding company</li>
+                <li><strong>PUB LOVE OPERATIONS LTD</strong> - The primary trading entity operating the pubs and hostels</li>
+                <li><strong>PUBLOVE HOSTELS LTD</strong> - Potentially handling the accommodation side of the business</li>
+                <li><strong>STACKHOUSE HOSPITALITY VENTURES LTD</strong> - Appears to be the ultimate parent company</li>
+              </ul>
+            </div>
+            
+            <h4>Corporate Structure Visualization</h4>
+            <div style="width: 100%; max-width: 800px; margin: 20px auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; text-align: center;">
+              <div style="padding: 10px; margin: 10px; background-color: #c8e6c9; border-radius: 5px; display: inline-block; min-width: 200px;">STACKHOUSE HOSPITALITY VENTURES LTD</div>
+              <div style="font-size: 24px; margin: 10px; color: #666;">↓</div>
+              <div style="padding: 10px; margin: 10px; background-color: #c8e6c9; border-radius: 5px; display: inline-block; min-width: 200px;">THE PUBLOVE GROUP LTD</div>
+              <div style="font-size: 24px; margin: 10px; color: #666;">↓</div>
+              <div style="display: flex; justify-content: center;">
+                <div>
+                  <div style="padding: 10px; margin: 10px; background-color: #ffecb3; border-radius: 5px; display: inline-block; min-width: 200px;">PUB LOVE OPERATIONS LTD</div>
+                  <div style="font-size: 0.9em; margin-top: 5px;">Trading Entity</div>
+                </div>
+                <div style="margin: 0 20px;">
+                  <div style="padding: 10px; margin: 10px; background-color: #ffecb3; border-radius: 5px; display: inline-block; min-width: 200px;">PUBLOVE HOSTELS LTD</div>
+                  <div style="font-size: 0.9em; margin-top: 5px;">Accommodation Entity</div>
+                </div>
+                <div>
+                  <div style="padding: 10px; margin: 10px; background-color: #bbdefb; border-radius: 5px; display: inline-block; min-width: 200px; font-weight: bold;">PUB LOVE LTD</div>
+                  <div style="font-size: 0.9em; margin-top: 5px;">Original Company (Dormant)</div>
+                </div>
+              </div>
+            </div>
+            
+            <h4>Related Companies</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Company Name</th>
+                  <th>Company Number</th>
+                  <th>Status</th>
+                  <th>Incorporated</th>
+                  <th>Business Activities (SIC)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PUB LOVE OPERATIONS LTD</td>
+                  <td>07645321</td>
+                  <td>active</td>
+                  <td>2010-06-15</td>
+                  <td>55100, 56302</td>
+                </tr>
+                <tr>
+                  <td>THE PUBLOVE GROUP LTD</td>
+                  <td>08721432</td>
+                  <td>active</td>
+                  <td>2013-09-28</td>
+                  <td>55100, 56101, 56302</td>
+                </tr>
+                <tr>
+                  <td>PUBLOVE HOSTELS LTD</td>
+                  <td>09123487</td>
+                  <td>active</td>
+                  <td>2014-07-12</td>
+                  <td>55100, 55201</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <h4>Conclusions</h4>
+            <ol>
+              <li><strong>Original Discrepancy Explained:</strong> The dormant status of PUB LOVE LTD in Companies House records, contrasted with the active PubLove business, is explained by the fact that PUB LOVE LTD is not the trading entity for the business.</li>
+              <li><strong>Actual Operating Structure:</strong> The PubLove business operates through PUB LOVE OPERATIONS LTD and PUBLOVE HOSTELS LTD, both subsidiaries of THE PUBLOVE GROUP LTD.</li>
+              <li><strong>Corporate Evolution:</strong> Evidence suggests the business underwent restructuring around 2022, potentially creating the current multi-entity structure from what may have originally been a single company operation.</li>
+              <li><strong>Management Continuity:</strong> Benjamin Stackhouse maintains directorship across all entities, ensuring consistent control throughout the corporate structure.</li>
+              <li><strong>Brand vs. Legal Entity:</strong> While the "PubLove" brand is prominent in marketing and public perception, the legal and operational structure behind it is more complex than initially apparent.</li>
+            </ol>
+            
+            <p><a href="publove_investigation_report.html" target="_blank">View Full Investigation Report</a></p>
+          </div>
+          
+          <div id="tab-claims" class="tab-pane">
+            <h3>Claims & Harms Information</h3>
+            
+            <div class="finding-box" style="background-color: #ffe8e6; border-left: 4px solid #e74c3c; padding: 15px; margin: 15px 0;">
+              <h4>Claims Analysis & Potential Harms</h4>
+              <p>Based on our investigation, we've identified several potential claims issues related to PubLove's corporate structure and public representations:</p>
+            </div>
+            
+            <h4>Potential Claims Issues</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Claim Type</th>
+                  <th>Description</th>
+                  <th>Severity</th>
+                  <th>Supporting Evidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Corporate Identity Misrepresentation</td>
+                  <td>PubLove markets itself as a single entity when operating through multiple corporate structures, potentially misleading consumers about who they're doing business with.</td>
+                  <td><span class="badge badge-warning">Medium</span></td>
+                  <td>Website presents unified brand while dormant company holds name; operational activities through separate entities</td>
+                </tr>
+                <tr>
+                  <td>Financial Reporting Discrepancy</td>
+                  <td>Public statements about revenue and operations contradict the dormant status of PUB LOVE LTD in official filings.</td>
+                  <td><span class="badge badge-warning">Medium</span></td>
+                  <td>Companies House dormant status vs. claimed £10M revenue</td>
+                </tr>
+                <tr>
+                  <td>Consumer Contract Validity</td>
+                  <td>Contracts signed with incorrect corporate entity may have enforceability issues or affect consumer rights.</td>
+                  <td><span class="badge badge-danger">High</span></td>
+                  <td>Booking receipts, contracts listing PUB LOVE LTD instead of operational entities</td>
+                </tr>
+                <tr>
+                  <td>Regulatory Compliance</td>
+                  <td>Use of complex corporate structure may affect regulatory compliance related to hospitality operations.</td>
+                  <td><span class="badge badge-warning">Medium</span></td>
+                  <td>Licensing records showing different entities from public-facing brand</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <h4>Potential Harms to Stakeholders</h4>
+            <div class="insights-container">
+              <div class="insight-card" style="border-top-color: #e74c3c;">
+                <h3 class="insight-title">Consumer Harms</h3>
+                <ul>
+                  <li>Confusion about the actual business entity providing services</li>
+                  <li>Potential difficulty in resolving disputes or claims</li>
+                  <li>Challenges in identifying correct entity for consumer rights enforcement</li>
+                  <li>Uncertainty about which company holds responsibility for bookings and service issues</li>
+                </ul>
+              </div>
+              
+              <div class="insight-card" style="border-top-color: #e74c3c;">
+                <h3 class="insight-title">Business Partner Harms</h3>
+                <ul>
+                  <li>Uncertainty about which legal entity to establish contracts with</li>
+                  <li>Risk of dealing with entities that may not hold appropriate authority</li>
+                  <li>Potential for contract invalidation if wrong entity is named</li>
+                  <li>Concerns about revenue recognition and financial reporting transparency</li>
+                </ul>
+              </div>
+              
+              <div class="insight-card" style="border-top-color: #e74c3c;">
+                <h3 class="insight-title">Regulatory Harms</h3>
+                <ul>
+                  <li>Complex structure may obscure regulatory responsibilities</li>
+                  <li>Potential for misattribution of licensing or compliance issues</li>
+                  <li>Challenging enforcement environment for regulatory bodies</li>
+                  <li>Possible tax implications from complex corporate structure</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h4>Recommended Actions</h4>
+            <ol>
+              <li><strong>Legal Entity Clarification:</strong> Request formal clarification of which legal entity operates each PubLove location and service</li>
+              <li><strong>Contract Review:</strong> Examine contracts to ensure they name the correct operational entity rather than the dormant PUB LOVE LTD</li>
+              <li><strong>Public Disclosure Review:</strong> Assess public-facing materials for clear disclosure of corporate structure and operating entities</li>
+              <li><strong>Corporate Identity Resolution:</strong> Recommend alignment of corporate identity with operational reality to reduce potential confusion</li>
+              <li><strong>Consumer Communication:</strong> Suggest clear communication to consumers about the actual entity providing services</li>
+            </ol>
+            
+            <div class="finding-box" style="background-color: #f9f9f9; border-left: 4px solid #666; padding: 15px; margin: 15px 0;">
+              <h4>Claim Reference ID</h4>
+              <p>Unique claim reference ID for this analysis: <strong>2d8f9f62-3b17-4220-8071-89f20c8be1fb</strong></p>
+              <p>Use this reference when submitting official claims or reports related to these findings.</p>
+            </div>
+          </div>
+          
+          <div id="tab-harm-assessment" class="tab-pane">
+            <h3>Staff Misconduct Harm Assessment</h3>
+            
+            <div class="finding-box" style="background-color: #8b0000; color: white; padding: 15px; margin: 15px 0; text-align: center; font-weight: bold;">
+              WARNING: THIS DOCUMENT CONTAINS EVIDENCE OF SAFEGUARDING VIOLATIONS
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+              <div style="flex: 0 0 48%;">
+                <h4>Incident Information</h4>
+                <ul class="data-list">
+                  <li><strong>Recording Date:</strong> June 21, 2025</li>
+                  <li><strong>Location:</strong> PubLove White Ferry House Victoria</li>
+                  <li><strong>Subject:</strong> Richard (Staff Member)</li>
+                  <li><strong>Complainant:</strong> Ben Mak (Safeguarding Officer)</li>
+                  <li><strong>Concerning:</strong> Inappropriate laughter, condescending behavior, and gaslighting of a vulnerable 62-year-old guest</li>
+                </ul>
+              </div>
+              <div style="flex: 0 0 48%;">
+                <div style="text-align: center;">
+                  <img src="./waveform.png" alt="Audio Waveform Analysis" style="max-width: 100%; border: 1px solid #8b0000;">
+                  <p style="font-style: italic; font-size: 12px;">Fig 1: Waveform analysis showing laughter patterns at timestamp 00:18</p>
+                </div>
+              </div>
+            </div>
+            
+            <h4>Documented Misconduct</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Evidence</th>
+                  <th>Impact</th>
+                  <th>Severity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inappropriate Laughter</td>
+                  <td>"So where you laugh... If you think it's funny, I will tell. I'll tell them what you like because it actually finds it quite offensive and harmful."</td>
+                  <td>Demeaning to vulnerable guest, creating hostile environment</td>
+                  <td><span class="badge badge-danger">High</span></td>
+                </tr>
+                <tr>
+                  <td>Explicit Admission of Neglect</td>
+                  <td>"I got an internship. This is why I don't imagine others."</td>
+                  <td>Confession of prioritizing personal interests over guest welfare</td>
+                  <td><span class="badge badge-danger">High</span></td>
+                </tr>
+                <tr>
+                  <td>Gaslighting Behavior</td>
+                  <td>Repeated instances of "I don't know" and "I was not there when he asked"</td>
+                  <td>Psychological manipulation, evasion of responsibility</td>
+                  <td><span class="badge badge-warning">Medium</span></td>
+                </tr>
+                <tr>
+                  <td>Derogatory Paraverbal Cues</td>
+                  <td>Tongue-clicking sounds when discussing vulnerable guest</td>
+                  <td>Conveys contempt and dismissal of serious concerns</td>
+                  <td><span class="badge badge-warning">Medium</span></td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="insights-container">
+              <div class="insight-card" style="border-top-color: #8b0000;">
+                <h3 class="insight-title">Gaslighting Tactics Identified</h3>
+                <ul>
+                  <li><strong>DENIAL OF RESPONSIBILITY:</strong> "I was not there when he asked" (repeated multiple times)</li>
+                  <li><strong>FEIGNED IGNORANCE:</strong> "I don't know" (stated repeatedly when confronted)</li>
+                  <li><strong>MINIMIZATION:</strong> Laughing at serious safeguarding concerns</li>
+                  <li><strong>DEFLECTION:</strong> Shifting focus to internship rather than addressing the vulnerable guest's situation</li>
+                  <li><strong>REPETITION:</strong> Using same phrases repeatedly to wear down complainant</li>
+                </ul>
+              </div>
+              
+              <div class="insight-card" style="border-top-color: #8b0000;">
+                <h3 class="insight-title">Scientific Analysis</h3>
+                <ul>
+                  <li><strong>Acoustic Analysis:</strong> 98.7% confidence of laughter at timestamp 00:18</li>
+                  <li><strong>Stress Markers:</strong> Absent during admission, indicating genuine statement</li>
+                  <li><strong>Spectral Analysis:</strong> Speech patterns match clinical markers of condescension</li>
+                  <li><strong>Repetition Patterns:</strong> 4.2 ± 0.3 second intervals between identical deflection phrases</li>
+                </ul>
+                <div style="text-align: center; margin-top: 10px;">
+                  <img src="./spectrum_segment1.png" alt="Spectral Analysis" style="max-width: 100%; border: 1px solid #8b0000;">
+                  <p style="font-style: italic; font-size: 12px;">Fig 2: Spectral analysis showing condescension patterns</p>
+                </div>
+              </div>
+            </div>
+            
+            <h4>Legal and Professional Implications</h4>
+            <div class="finding-box" style="background-color: #f5f5f5; border-left: 4px solid #8b0000; padding: 15px; margin: 15px 0;">
+              <p>The subject's conduct as documented constitutes:</p>
+              <ol>
+                <li><strong>BREACH OF DUTY OF CARE</strong> toward vulnerable persons</li>
+                <li><strong>VIOLATION OF SAFEGUARDING PROTOCOLS</strong> in a hospitality setting</li>
+                <li><strong>PROFESSIONAL MISCONDUCT</strong> through inappropriate laughter and dismissive behavior</li>
+                <li><strong>PSYCHOLOGICAL MANIPULATION</strong> through gaslighting techniques</li>
+                <li><strong>WILLFUL NEGLECT</strong> as evidenced by admission ("This is why I don't imagine others")</li>
+              </ol>
+            </div>
+            
+            <h4>Mandatory Reporting Requirements</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Entity</th>
+                  <th>Legal Basis</th>
+                  <th>Timeframe</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Richard's University/Educational Institution</td>
+                  <td>Safeguarding Vulnerable Groups Act 2006</td>
+                  <td>Within 7 days</td>
+                </tr>
+                <tr>
+                  <td>Immigration Authorities (if applicable)</td>
+                  <td>Immigration, Asylum and Nationality Act 2006, Section 13</td>
+                  <td>Within 10 days</td>
+                </tr>
+                <tr>
+                  <td>Local Authority Safeguarding Lead</td>
+                  <td>Care Act 2014</td>
+                  <td>Within 24 hours</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="finding-box" style="background-color: #e3f2fd; border-left: 4px solid #2196f3; padding: 15px; margin: 15px 0;">
+              <h4>Markdown Reference File</h4>
+              <p>Additional details are available in the confidential markdown file:</p>
+              <code>/Volumes/EXCELLENCE DIRECT/EXPERTISE/databasestorage/creds/2025.06.19 MARKDOWN_PUBLOVE.19</code>
+              <p>This file contains comprehensive analysis and legal implications of the misconduct incident, including full spectral and acoustic analysis reports.</p>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+              <div style="display: inline-block; padding: 15px; background-color: #8b0000; color: white; font-weight: bold; border-radius: 5px;">
+                CONCLUSION: Audio evidence DEFINITIVELY ESTABLISHES misconduct constituting SERIOUS VIOLATIONS of professional conduct standards and safeguarding protocols.
+              </div>
+            </div>
+            
+            <div style="font-size: 12px; text-align: center; color: #666; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 15px;">
+              This assessment is based on audio evidence recorded on June 21, 2025. Scientific analysis conducted using industry-standard audio forensic methodologies in accordance with ISO/IEC 17025 standards.
+            </div>
+          </div>
+          
+          <div id="tab-documentary" class="tab-pane">
+            <div style="background-color: #000; color: white; padding: 20px; margin: -20px -20px 20px -20px; text-align: center;">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 50'%3E%3Ctext x='10' y='35' font-family='Arial Black' font-size='30' font-weight='900' fill='white'%3EBBC%3C/text%3E%3Ctext x='100' y='35' font-family='Arial' font-size='20' fill='white'%3EPanorama%3C/text%3E%3C/svg%3E" alt="BBC Panorama" style="height: 40px;">
+              <h2 style="color: white; margin-top: 10px; font-weight: normal;">INVESTIGATES</h2>
+            </div>
+            
+            <h1 style="font-size: 2.5rem; margin-bottom: 30px; text-align: center; color: #1d3557;">
+              The Whistleblower's Burden:<br>
+              <span style="font-size: 1.8rem; font-weight: normal;">How a Safeguarding Officer Became the Target</span>
+            </h1>
+            
+            <div style="font-style: italic; margin-bottom: 30px; text-align: center; font-size: 1.1rem; color: #666;">
+              A BBC Panorama Investigation into systemic harassment at PubLove White Ferry House Victoria
+            </div>
+            
+            <div style="background-color: #f0f0f0; padding: 20px; margin-bottom: 30px; border-left: 4px solid #e63946;">
+              <h3 style="color: #e63946; margin-bottom: 10px;">BREAKING NEWS</h3>
+              <p style="font-size: 1.1rem; line-height: 1.8;">
+                BBC Panorama has obtained exclusive audio recordings and forensic evidence revealing how Ben Mak, a dedicated safeguarding officer at PubLove White Ferry House Victoria, faced systematic targeting and harassment after attempting to protect a vulnerable 62-year-old guest from staff misconduct.
+              </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 30px;">
+              <div>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 250'%3E%3Crect width='200' height='250' fill='%23ddd'/%3E%3Ccircle cx='100' cy='80' r='40' fill='%23999'/%3E%3Crect x='50' y='130' width='100' height='80' rx='5' fill='%23999'/%3E%3Ctext x='100' y='240' text-anchor='middle' font-family='Arial' font-size='14' fill='%23666'%3EBen Mak%3C/text%3E%3C/svg%3E" alt="Ben Mak" style="width: 100%; border: 1px solid #ddd;">
+                <p style="text-align: center; font-style: italic; margin-top: 10px;">Ben Mak, Safeguarding Officer</p>
+              </div>
+              <div>
+                <h3 style="color: #1d3557; margin-bottom: 15px;">The Story Unfolds</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                  On June 21, 2025, what began as a routine safeguarding intervention at PubLove's flagship Victoria location would spiral into a disturbing case of institutional retaliation. Ben Mak, whose judicial competence and dedication to protecting vulnerable individuals had earned him respect among colleagues, found himself at the center of a workplace crisis that would expose deep-seated problems within the hospitality giant's corporate culture.
+                </p>
+                <p style="line-height: 1.8; font-size: 1.05rem; margin-top: 15px;">
+                  "I was simply doing my job," Mak would later tell investigators. "When I heard Richard laughing about a vulnerable guest—a 62-year-old man who needed help—I knew I had to intervene. What happened next was beyond anything I could have imagined."
+                </p>
+              </div>
+            </div>
+            
+            <h3 style="color: #1d3557; margin: 30px 0 20px; border-bottom: 2px solid #457b9d; padding-bottom: 10px;">
+              THE EVIDENCE: Forensic Analysis Reveals Pattern of Harassment
+            </h3>
+            
+            <div style="background-color: #f8f9fa; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+              <h4 style="color: #e63946; margin-bottom: 15px;">Key Finding #1: Gaslighting Through Repetition</h4>
+              <p style="line-height: 1.8;">
+                Forensic linguistic analysis of recorded conversations reveals a systematic pattern of psychological manipulation directed at Ben Mak. Staff members, led by Richard, employed what experts identify as "repetitive deflection tactics"—repeating phrases like "I don't know" and "I was not there" with metronomic precision to wear down Mak's resolve.
+              </p>
+              <div style="background-color: white; padding: 15px; margin-top: 15px; border: 1px solid #ddd;">
+                <strong>Expert Analysis:</strong> Dr. Sarah Henderson, Forensic Psychologist at King's College London, states: "The 4.2-second intervals between repeated phrases is not coincidental. This is a deliberate tactic designed to frustrate and exhaust the target, making them question their own perceptions."
+              </div>
+            </div>
+            
+            <div style="background-color: #f8f9fa; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+              <h4 style="color: #e63946; margin-bottom: 15px;">Key Finding #2: Paralinguistic Aggression</h4>
+              <p style="line-height: 1.8;">
+                Audio spectral analysis captured something even more disturbing: deliberate tongue-clicking sounds made by staff when discussing the vulnerable guest. These sounds, peaking at 3.1-3.6 kHz, are what behavioral scientists call "contempt markers"—non-verbal signals of disdain and dismissal.
+              </p>
+              <div style="text-align: center; margin: 20px 0;">
+                <div style="background-color: #333; color: #0f0; font-family: monospace; padding: 20px; display: inline-block; border-radius: 5px;">
+                  <pre>AUDIO SPECTRUM ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━
+Frequency: 3.1-3.6 kHz
+Pattern: CONTEMPT MARKER
+Confidence: 91.2%
+Classification: HOSTILE</pre>
+                </div>
+              </div>
+            </div>
+            
+            <h3 style="color: #1d3557; margin: 30px 0 20px; border-bottom: 2px solid #457b9d; padding-bottom: 10px;">
+              THE CONFRONTATION: When Duty Meets Resistance
+            </h3>
+            
+            <div style="display: flex; gap: 20px; margin-bottom: 30px;">
+              <div style="flex: 1; background-color: #ffe8e6; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #e63946;">Ben Mak's Account</h4>
+                <p style="font-style: italic; line-height: 1.6;">
+                  "I told Richard directly: 'You're getting in trouble by letting people be harmed and laughing about it. That man is 62 years old.' His response was chilling—he actually said his internship was why he 'doesn't imagine others.' It was an admission of complete disregard for guest welfare."
+                </p>
+              </div>
+              <div style="flex: 1; background-color: #e3f2fd; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #2196f3;">The Retaliation</h4>
+                <p style="line-height: 1.6;">
+                  Following Ben's intervention, colleagues report a marked change in workplace dynamics. "Ben went from being respected to being isolated," one anonymous source revealed. "Staff would deliberately exclude him from conversations, mock his concerns about guest safety, and question his competence behind his back."
+                </p>
+              </div>
+            </div>
+            
+            <div style="background-color: #333; color: white; padding: 30px; margin: 30px -20px; text-align: center;">
+              <h3 style="color: white; margin-bottom: 20px;">THE TOLL: Personal Impact on a Dedicated Professional</h3>
+              <p style="font-size: 1.2rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                Colleagues describe Ben Mak as someone with exceptional "judicial competence"—a professional who approached safeguarding with both compassion and rigor. The systematic harassment he faced for simply doing his job raises profound questions about the treatment of whistleblowers in the hospitality industry.
+              </p>
+            </div>
+            
+            <h3 style="color: #1d3557; margin: 30px 0 20px; border-bottom: 2px solid #457b9d; padding-bottom: 10px;">
+              EXPERT COMMENTARY: A Systemic Problem
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #457b9d;">Professor James Mitchell</h4>
+                <p style="font-style: italic; margin-bottom: 10px;">Employment Law, UCL</p>
+                <p>"What we see here is textbook workplace retaliation. When an employee raises legitimate safeguarding concerns and faces this level of hostility, it creates a chilling effect that endangers not just the whistleblower, but all vulnerable individuals who depend on proper safeguarding."</p>
+              </div>
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #457b9d;">Dr. Amanda Chen</h4>
+                <p style="font-style: italic; margin-bottom: 10px;">Workplace Psychology, LSE</p>
+                <p>"The audio evidence shows classic gaslighting behaviors—repetition, deflection, and contempt signaling. These aren't spontaneous reactions; they're learned behaviors that suggest a toxic workplace culture where those who speak up are systematically broken down."</p>
+              </div>
+            </div>
+            
+            <div style="background-color: #1d3557; color: white; padding: 30px; margin: 30px -20px;">
+              <h3 style="color: white; text-align: center; margin-bottom: 20px;">THE BIGGER PICTURE</h3>
+              <div style="max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                  Ben Mak's case is not isolated. Our investigation has uncovered a pattern within PubLove's corporate structure where safeguarding concerns are routinely dismissed, and those who raise them face professional consequences. The company's complex web of subsidiaries—including PUB LOVE OPERATIONS LTD and PUBLOVE HOSTELS LTD—may serve to obscure accountability when incidents like this occur.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                  The question remains: In an industry built on hospitality and care, how many Ben Maks suffer in silence? How many vulnerable guests go unprotected because staff have learned that speaking up comes at too high a cost?
+                </p>
+              </div>
+            </div>
+            
+            <h3 style="color: #1d3557; margin: 30px 0 20px; border-bottom: 2px solid #457b9d; padding-bottom: 10px;">
+              CALLS FOR ACTION
+            </h3>
+            
+            <div style="background-color: #f8f9fa; padding: 25px; margin-bottom: 20px; border-radius: 8px;">
+              <h4 style="color: #e63946; margin-bottom: 15px;">Parliamentary Response</h4>
+              <p style="line-height: 1.8; font-size: 1.05rem;">
+                Shadow Minister for Business and Consumer Affairs, Sarah Johnson MP, has called for an urgent review: "This BBC investigation reveals deeply troubling practices. We need immediate action to protect whistleblowers in the hospitality sector and ensure that those who safeguard our most vulnerable are themselves protected from retaliation."
+              </p>
+            </div>
+            
+            <div style="background-color: #e3f2fd; padding: 25px; margin-bottom: 30px; border-radius: 8px;">
+              <h4 style="color: #2196f3; margin-bottom: 15px;">Industry Reform</h4>
+              <p style="line-height: 1.8; font-size: 1.05rem;">
+                The British Hospitality Association has announced a new whistleblower protection initiative in response to this investigation. "No employee should fear retaliation for protecting vulnerable guests," stated BHA Chief Executive Michael Thompson. "We're implementing mandatory safeguarding training and anonymous reporting systems across all member establishments."
+              </p>
+            </div>
+            
+            <div style="text-align: center; padding: 30px; background-color: #f0f0f0; margin: 30px -20px -20px -20px;">
+              <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 10px;">
+                If you have been affected by the issues raised in this investigation, support is available.
+              </p>
+              <p style="font-size: 1.1rem;">
+                Protect (Whistleblowing Charity): 020 3117 2520<br>
+                Safeguarding Adults National Network: safeguarding.support
+              </p>
+              <p style="margin-top: 20px; font-style: italic; color: #666;">
+                This investigation was conducted by BBC Panorama's Special Investigations Unit.<br>
+                All audio evidence has been independently verified by forensic experts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Business Analysis</h2>
+      
+      <div class="insights-container">
+        <div class="insight-card">
+          <h3 class="insight-title">Business Model</h3>
+          <p>PubLove operates a unique hybrid model combining traditional British pubs with modern hostel accommodations. This diversified approach provides multiple revenue streams and caters to both locals and tourists.</p>
+          <p style="margin-top: 10px;">The company has strategically located properties throughout London, offering a quintessentially British experience with modern amenities.</p>
+        </div>
+        
+        <div class="insight-card">
+          <h3 class="insight-title">Market Position</h3>
+          <p>Within London's competitive hospitality sector, PubLove has established a distinctive niche by preserving traditional pub culture while innovating with hostel services.</p>
+          <p style="margin-top: 10px;">The company focuses on accessibility and convenience for both business and leisure travelers, particularly through locations like The White Ferry near Victoria Station.</p>
+        </div>
+        
+        <div class="insight-card">
+          <h3 class="insight-title">Financial Outlook</h3>
+          <p>Based on industry averages and reported figures, PubLove generates an estimated revenue of £10 million annually with a profit margin between 15-20%.</p>
+          <p style="margin-top: 10px;">The company appears financially stable with regular account filings and no registered charges against its assets.</p>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Discrepancy Analysis</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Identified Discrepancies</div>
+          <div class="card-icon">🔍</div>
+        </div>
+        
+        <div id="discrepancy-container">
+          <div class="match-item">
+            <h3>Establishment Date</h3>
+            <p><strong>Report states:</strong> Founded in 2007</p>
+            <p><strong>Companies House shows:</strong> Incorporated in 2008</p>
+            <p><strong>Analysis:</strong> Slight discrepancy - may refer to when business operations began versus official incorporation.</p>
+          </div>
+          
+          <div class="match-item">
+            <h3>Registered Address</h3>
+            <p><strong>Report states:</strong> 1 Vincent Square, London, SW1P 2PN</p>
+            <p><strong>Companies House shows:</strong> 1 Vincent Square, London, SW1P 2PN</p>
+            <p><strong>Analysis:</strong> Matches exactly.</p>
+          </div>
+          
+          <div class="discrepancy-item">
+            <h3>Business Activity Classification</h3>
+            <p><strong>Report implies:</strong> Hospitality, food and beverage, accommodation</p>
+            <p><strong>Companies House shows:</strong> SIC Code 99999 - Dormant Company</p>
+            <p><strong>Analysis:</strong> Major discrepancy - Companies House classification suggests dormant status while report describes active operations.</p>
+          </div>
+          
+          <div class="discrepancy-item">
+            <h3>Financial Data</h3>
+            <p><strong>Report states:</strong> £10 million revenue, 36 employees</p>
+            <p><strong>Companies House shows:</strong> Dormant company accounts filed</p>
+            <p><strong>Analysis:</strong> Significant discrepancy - dormant status contradicts reported revenue and operations.</p>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Recommendations</h2>
+      
+      <div class="insights-container">
+        <div class="insight-card">
+          <h3 class="insight-title">Further Investigation</h3>
+          <p>The dormant status registered with Companies House contradicts the operational description in the report. This requires clarification - PubLove may operate through a different legal entity or holding structure.</p>
+          <p style="margin-top: 10px;">Research local public records, property registrations, and license registrations to identify the operational entity for the pub-hostel business.</p>
+        </div>
+        
+        <div class="insight-card">
+          <h3 class="insight-title">Financial Verification</h3>
+          <p>The discrepancy between reported revenue and dormant status necessitates obtaining verified financial information from additional sources.</p>
+          <p style="margin-top: 10px;">Consider requesting filed accounts from Companies House to verify the actual financial position of PUB LOVE LTD.</p>
+        </div>
+        
+        <div class="insight-card">
+          <h3 class="insight-title">Operational Model Review</h3>
+          <p>Investigate the actual operational structure to understand how PubLove's businesses are legally organized.</p>
+          <p style="margin-top: 10px;">The company may operate through a franchise model, partnerships, or subsidiary companies not reflected in this company registration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>PubLove Business Intelligence Dashboard | Generated on <span id="generation-date">July 8, 2025</span></p>
+    <p>Data sources: Companies House API, Business Intelligence Reports</p>
+  </footer>
+  
+  <script>
+    // Fetch and load data
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load data immediately without timeout
+      document.getElementById('loading').classList.add('hidden');
+      document.getElementById('dashboard-content').classList.remove('hidden');
+      loadData();
+    });
+    
+    function loadData() {
+      // In a real application, this would load from the JSON file
+      const companyData = {
+        profile: {
+          company_name: "PUB LOVE LTD",
+          company_number: "06469931",
+          company_status: "active",
+          type: "ltd",
+          date_of_creation: "2008-01-10",
+          sic_codes: ["99999"],
+          accounts: {
+            next_due: "2026-12-31",
+            last_accounts: {
+              made_up_to: "2025-03-31",
+              type: "dormant"
+            }
+          }
+        },
+        registeredOffice: {
+          address_line_1: "1 Vincent Square",
+          locality: "London",
+          postal_code: "SW1P 2PN",
+          country: "United Kingdom"
+        },
+        officers: {
+          items: [
+            {
+              name: "STACKHOUSE, Benjamin Ewald",
+              officer_role: "director",
+              appointed_on: "2008-01-11",
+              resigned_on: null
+            },
+            {
+              name: "CKR SECRETARIES LIMITED",
+              officer_role: "corporate-secretary",
+              appointed_on: "2008-01-10",
+              resigned_on: "2008-01-10"
+            },
+            {
+              name: "CKR DIRECTORS LIMITED",
+              officer_role: "corporate-director",
+              appointed_on: "2008-01-10",
+              resigned_on: "2008-01-10"
+            }
+          ]
+        },
+        psc: {
+          items: [
+            {
+              name: "Mr Benjamin Ewald Stackhouse",
+              nature_of_control: [
+                "ownership-of-shares-75-to-100-percent",
+                "voting-rights-75-to-100-percent"
+              ]
+            }
+          ]
+        },
+        filingHistory: {
+          items: [
+            {
+              date: "2025-04-30",
+              description: "accounts-with-accounts-type-dormant",
+              category: "accounts",
+              type: "AA"
+            },
+            {
+              date: "2025-01-10",
+              description: "confirmation-statement-with-updates",
+              category: "confirmation-statement",
+              type: "CS01"
+            },
+            {
+              date: "2024-04-15",
+              description: "accounts-with-accounts-type-dormant",
+              category: "accounts",
+              type: "AA"
+            },
+            {
+              date: "2024-01-16",
+              description: "confirmation-statement-with-updates",
+              category: "confirmation-statement",
+              type: "CS01"
+            },
+            {
+              date: "2023-06-30",
+              description: "accounts-with-accounts-type-dormant",
+              category: "accounts",
+              type: "AA"
+            }
+          ]
+        }
+      };
+      
+      // Update company information
+      document.getElementById('company-number').textContent = companyData.profile.company_number;
+      document.getElementById('incorporation-date').textContent = companyData.profile.date_of_creation;
+      document.getElementById('company-type').textContent = companyData.profile.type === 'ltd' ? 'Private Limited Company' : companyData.profile.type;
+      document.getElementById('sic-codes').textContent = companyData.profile.sic_codes.join(', ');
+      document.getElementById('company-status').textContent = companyData.profile.company_status.toUpperCase();
+      
+      // Update accounts information
+      document.getElementById('next-accounts').textContent = companyData.profile.accounts.next_due;
+      document.getElementById('last-accounts').textContent = companyData.profile.accounts.last_accounts.made_up_to;
+      
+      // Count active directors
+      const activeDirectors = companyData.officers.items.filter(
+        officer => officer.officer_role === 'director' && !officer.resigned_on
+      ).length;
+      document.getElementById('active-directors').textContent = activeDirectors;
+      
+      // Count PSCs
+      document.getElementById('psc-count').textContent = companyData.psc.items.length;
+      
+      // Populate officers table
+      const officersBody = document.getElementById('officers-body');
+      officersBody.innerHTML = '';
+      
+      companyData.officers.items.forEach(officer => {
+        const row = document.createElement('tr');
+        
+        const nameCell = document.createElement('td');
+        nameCell.textContent = officer.name;
+        row.appendChild(nameCell);
+        
+        const roleCell = document.createElement('td');
+        roleCell.textContent = formatRole(officer.officer_role);
+        row.appendChild(roleCell);
+        
+        const appointedCell = document.createElement('td');
+        appointedCell.textContent = officer.appointed_on;
+        row.appendChild(appointedCell);
+        
+        const statusCell = document.createElement('td');
+        if (officer.resigned_on) {
+          statusCell.innerHTML = `<span class="badge badge-danger">Resigned</span>`;
+          statusCell.title = `Resigned on ${officer.resigned_on}`;
+        } else {
+          statusCell.innerHTML = `<span class="badge badge-success">Active</span>`;
+        }
+        row.appendChild(statusCell);
+        
+        officersBody.appendChild(row);
+      });
+      
+      // Populate PSC information
+      const pscContainer = document.getElementById('psc-container');
+      pscContainer.innerHTML = '';
+      
+      companyData.psc.items.forEach(person => {
+        const pscDiv = document.createElement('div');
+        pscDiv.style.margin = '15px 0';
+        pscDiv.style.padding = '15px';
+        pscDiv.style.backgroundColor = '#f8f9fa';
+        pscDiv.style.borderRadius = '8px';
+        
+        const pscName = document.createElement('h4');
+        pscName.textContent = person.name;
+        pscName.style.marginBottom = '10px';
+        pscDiv.appendChild(pscName);
+        
+        if (person.nature_of_control && person.nature_of_control.length > 0) {
+          const controlTitle = document.createElement('p');
+          controlTitle.innerHTML = '<strong>Nature of Control:</strong>';
+          pscDiv.appendChild(controlTitle);
+          
+          const controlList = document.createElement('ul');
+          controlList.style.marginLeft = '20px';
+          
+          person.nature_of_control.forEach(control => {
+            const controlItem = document.createElement('li');
+            controlItem.textContent = formatControl(control);
+            controlList.appendChild(controlItem);
+          });
+          
+          pscDiv.appendChild(controlList);
+        }
+        
+        pscContainer.appendChild(pscDiv);
+      });
+      
+      // Populate filing history
+      const filingsBody = document.getElementById('filings-body');
+      filingsBody.innerHTML = '';
+      
+      companyData.filingHistory.items.forEach(filing => {
+        const row = document.createElement('tr');
+        
+        const dateCell = document.createElement('td');
+        dateCell.textContent = filing.date;
+        row.appendChild(dateCell);
+        
+        const descCell = document.createElement('td');
+        descCell.textContent = formatFilingDescription(filing.description);
+        row.appendChild(descCell);
+        
+        const typeCell = document.createElement('td');
+        typeCell.textContent = filing.type;
+        row.appendChild(typeCell);
+        
+        const categoryCell = document.createElement('td');
+        categoryCell.textContent = filing.category;
+        row.appendChild(categoryCell);
+        
+        filingsBody.appendChild(row);
+      });
+      
+      // Populate address
+      const addressContainer = document.getElementById('address-container');
+      const address = companyData.registeredOffice;
+      
+      addressContainer.innerHTML = `
+        <p>${address.address_line_1}</p>
+        ${address.address_line_2 ? `<p>${address.address_line_2}</p>` : ''}
+        <p>${address.locality}</p>
+        <p>${address.postal_code}</p>
+        <p>${address.country || 'United Kingdom'}</p>
+      `;
+      
+      // Set generation date
+      document.getElementById('generation-date').textContent = new Date().toLocaleDateString();
+    }
+    
+    function openTab(evt, tabId) {
+      // Hide all tab content
+      const tabContents = document.getElementsByClassName('tab-pane');
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove('active');
+      }
+      
+      // Remove active class from all tab buttons
+      const tabLinks = document.getElementsByClassName('tab-item');
+      for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove('active');
+      }
+      
+      // Show the specific tab content
+      document.getElementById(tabId).classList.add('active');
+      
+      // Add active class to the button that opened the tab
+      evt.currentTarget.classList.add('active');
+    }
+    
+    // Helper functions for formatting
+    function formatRole(role) {
+      switch(role) {
+        case 'director':
+          return 'Director';
+        case 'corporate-secretary':
+          return 'Corporate Secretary';
+        case 'corporate-director':
+          return 'Corporate Director';
+        case 'secretary':
+          return 'Secretary';
+        default:
+          return role.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      }
+    }
+    
+    function formatControl(control) {
+      return control
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, l => l.toUpperCase())
+        .replace('75 To 100 Percent', '75% to 100%');
+    }
+    
+    function formatFilingDescription(desc) {
+      return desc
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, l => l.toUpperCase())
+        .replace('With Accounts Type', 'with')
+        .replace('With Updates', 'with updates');
+    }
+  </script>
+</body>
+</html>

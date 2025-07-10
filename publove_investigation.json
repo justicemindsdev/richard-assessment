@@ -1,0 +1,138 @@
+{
+  "relatedCompanies": [
+    {
+      "company_name": "PUB LOVE OPERATIONS LTD",
+      "company_number": "07645321",
+      "company_status": "active",
+      "incorporation_date": "2010-06-15",
+      "sic_codes": [
+        "55100",
+        "56302"
+      ],
+      "registered_address": "1 Vincent Square, London, SW1P 2PN"
+    },
+    {
+      "company_name": "THE PUBLOVE GROUP LTD",
+      "company_number": "08721432",
+      "company_status": "active",
+      "incorporation_date": "2013-09-28",
+      "sic_codes": [
+        "55100",
+        "56101",
+        "56302"
+      ],
+      "registered_address": "1 Vincent Square, London, SW1P 2PN"
+    },
+    {
+      "company_name": "PUBLOVE HOSTELS LTD",
+      "company_number": "09123487",
+      "company_status": "active",
+      "incorporation_date": "2014-07-12",
+      "sic_codes": [
+        "55100",
+        "55201"
+      ],
+      "registered_address": "1 Vincent Square, London, SW1P 2PN"
+    }
+  ],
+  "directorConnections": [
+    {
+      "company_name": "PUB LOVE OPERATIONS LTD",
+      "company_number": "07645321",
+      "role": "director",
+      "appointed_on": "2010-06-15",
+      "active": true
+    },
+    {
+      "company_name": "THE PUBLOVE GROUP LTD",
+      "company_number": "08721432",
+      "role": "director",
+      "appointed_on": "2013-09-28",
+      "active": true
+    },
+    {
+      "company_name": "PUBLOVE HOSTELS LTD",
+      "company_number": "09123487",
+      "role": "director",
+      "appointed_on": "2014-07-12",
+      "active": true
+    },
+    {
+      "company_name": "STACKHOUSE HOSPITALITY VENTURES LTD",
+      "company_number": "10543299",
+      "role": "director",
+      "appointed_on": "2016-12-21",
+      "active": true
+    }
+  ],
+  "propertyRecords": [
+    {
+      "name": "The White Ferry House",
+      "address": "1A Sutherland Street, Pimlico, London SW1V 4LD",
+      "property_type": "Public House with Accommodation",
+      "license_holder": "PubLove Operations Ltd",
+      "license_type": "Premises License with Alcohol and Late Night Refreshment",
+      "business_rates": "Registered to PubLove Operations Ltd"
+    },
+    {
+      "name": "The Crown",
+      "address": "102 Lavender Hill, Battersea, London SW11 5RD",
+      "property_type": "Public House with Accommodation",
+      "license_holder": "PubLove Operations Ltd",
+      "license_type": "Premises License with Alcohol and Late Night Refreshment",
+      "business_rates": "Registered to PubLove Operations Ltd"
+    },
+    {
+      "name": "The Exmouth Arms",
+      "address": "1 Starcross Street, London NW1 2HR",
+      "property_type": "Public House with Accommodation",
+      "license_holder": "PubLove Operations Ltd",
+      "license_type": "Premises License with Alcohol",
+      "business_rates": "Registered to PubLove Operations Ltd"
+    }
+  ],
+  "businessLinks": [],
+  "licenseInformation": [],
+  "newsArticles": [
+    {
+      "title": "PubLove secures new investment for expansion",
+      "source": "Hospitality Times",
+      "date": "2023-11-15",
+      "summary": "The PubLove Group has secured £5 million in new investment to expand its pub-hostel hybrid concept across London. CEO Benjamin Stackhouse announced plans to open three new locations by 2026."
+    },
+    {
+      "title": "PubLove partners with craft brewery for exclusive beer line",
+      "source": "Food & Beverage Magazine",
+      "date": "2024-03-22",
+      "summary": "PubLove Operations Ltd has announced a partnership with London-based craft brewery to develop an exclusive beer line for its pub locations."
+    },
+    {
+      "title": "PubLove Group restructures operations for growth",
+      "source": "Business Insider",
+      "date": "2022-08-10",
+      "summary": "The PubLove Group has completed a corporate restructuring to position the company for further growth. The move separates property holdings from operations and creates dedicated entities for the pub and hostel businesses."
+    }
+  ],
+  "socialMediaReferences": [],
+  "subsidiaries": [
+    {
+      "parent": "THE PUBLOVE GROUP LTD",
+      "subsidiary": "PUB LOVE OPERATIONS LTD",
+      "relationship": "100% ownership",
+      "filing_reference": "Annual Return 2024"
+    },
+    {
+      "parent": "THE PUBLOVE GROUP LTD",
+      "subsidiary": "PUBLOVE HOSTELS LTD",
+      "relationship": "100% ownership",
+      "filing_reference": "Annual Return 2024"
+    },
+    {
+      "parent": "STACKHOUSE HOSPITALITY VENTURES LTD",
+      "subsidiary": "THE PUBLOVE GROUP LTD",
+      "relationship": "Majority ownership",
+      "filing_reference": "Confirmation Statement 2023"
+    }
+  ],
+  "analysisTimestamp": "2025-07-08T08:46:15.911Z"
+}
