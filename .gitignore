@@ -33,9 +33,9 @@ logs/
 tmp/
 temp/
 
-# Audio files
-*.mp3
-*.wav
-*.ogg
-*.m4a
+# Audio files (commented out to allow them in the repository)
+# *.mp3
+# *.wav
+# *.ogg
+# *.m4a
 *.pdf
