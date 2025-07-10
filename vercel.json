@@ -1,5 +1,15 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.mp3",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/",
