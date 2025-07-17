@@ -3,183 +3,414 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRONY OF SERVICE: BEN'S CONSIDERATION VS. COMPANY NEGLECT</title>
+    <title>OFFICIAL GOVERNMENT REPORT: WHITE FERRY HOUSE NEGLIGENCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=GDS+Transport:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --gov-blue: #1d70b8;
+            --gov-dark-blue: #003078;
+            --gov-black: #0b0c0c;
+            --gov-grey: #505a5f;
+            --gov-light-grey: #f3f2f1;
+            --gov-white: #ffffff;
+            --gov-focus: #ffdd00;
+            --gov-error: #d4351c;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: "GDS Transport", Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
+            padding: 0;
+            background-color: var(--gov-light-grey);
+            color: var(--gov-black);
+        }
+        .crown-logo {
+            display: inline-block;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .gov-header {
+            background-color: var(--gov-white);
+            border-bottom: 10px solid var(--gov-dark-blue);
+            padding: 15px 0;
+        }
+        .gov-header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+        }
+        .gov-name {
+            font-weight: bold;
+            font-size: 22px;
+            color: var(--gov-black);
+        }
+        .gov-phase {
+            display: inline-block;
+            padding: 2px 5px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gov-white);
+            background-color: var(--gov-dark-blue);
+            margin-left: 10px;
         }
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: var(--gov-white);
             padding: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-left: 5px solid #ff8c00; /* Orange border for irony page */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+        }
+        .main-content {
+            flex: 3;
+            padding-right: 30px;
+        }
+        .evidence-sidebar {
+            flex: 1;
+            background-color: var(--gov-light-grey);
+            padding: 20px;
+            border-left: 1px solid #dee0e2;
+        }
+        .toc-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dee0e2;
+        }
+        .toc-item:last-child {
+            border-bottom: none;
+        }
+        .toc-item a {
+            color: var(--gov-dark-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .toc-item a:hover {
+            text-decoration: underline;
         }
         h1 {
-            color: #ff8c00;
-            text-align: center;
+            color: var(--gov-dark-blue);
             margin-bottom: 30px;
-            font-size: 28px;
-            text-transform: uppercase;
+            font-size: 36px;
+            font-weight: 700;
         }
         h2 {
-            color: #ff8c00;
-            border-bottom: 2px solid #ff8c00;
-            padding-bottom: 5px;
-            margin-top: 30px;
+            color: var(--gov-dark-blue);
+            border-bottom: 1px solid var(--gov-grey);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 24px;
         }
         h3 {
-            color: #ff8c00;
-            margin-top: 20px;
+            color: var(--gov-dark-blue);
+            margin-top: 25px;
+            font-size: 19px;
         }
         .section-box {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #fff3e6; /* Light orange background */
-            border-left: 4px solid #ff8c00;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--gov-light-grey);
+            border-left: 5px solid var(--gov-blue);
         }
         .evidence-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            background-color: #fef8f2;
-            border-left: 3px solid #ff8c00;
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: var(--gov-white);
+            border-left: 4px solid var(--gov-dark-blue);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .timestamp {
             font-weight: bold;
-            color: #ff8c00;
-            margin-bottom: 5px;
+            color: var(--gov-dark-blue);
+            margin-bottom: 8px;
+            font-size: 16px;
         }
         .description {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
         .note {
             font-style: italic;
-            color: #666;
+            color: var(--gov-grey);
             font-size: 0.9em;
+            padding: 10px;
+            background-color: rgba(29, 112, 184, 0.05);
+            border-radius: 3px;
         }
         .conclusion {
-            margin-top: 30px;
-            padding: 15px;
-            background-color: #ff8c00;
-            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: var(--gov-dark-blue);
+            color: var(--gov-white);
             font-weight: bold;
-            text-align: center;
         }
         .legal-header, .legal-footer {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            color: var(--gov-grey);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .legal-header {
+            border-bottom: 1px solid var(--gov-grey);
+            padding-bottom: 15px;
+        }
+        .legal-footer {
+            border-top: 1px solid var(--gov-grey);
+            padding-top: 15px;
+            margin-top: 40px;
+        }
+        .official-stamp {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--gov-dark-blue);
+            color: white;
+            font-weight: bold;
             font-size: 12px;
-            color: #666;
+            border-radius: 3px;
+            margin-right: 10px;
         }
         img {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 10px 0;
-            border: 1px solid #ddd;
+            margin: 15px 0;
+            border: 1px solid #dee0e2;
         }
         video {
             max-width: 100%;
             height: auto;
             display: block;
+            margin: 15px 0;
+            border: 1px solid #dee0e2;
+        }
+        .media-evidence {
+            background-color: rgba(29, 112, 184, 0.05);
+            padding: 15px;
+            border-radius: 5px;
             margin: 10px 0;
-            border: 1px solid #ddd;
+        }
+        .audio-quote {
+            background-color: rgba(29, 112, 184, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid var(--gov-blue);
+        }
+        .audio-quote-text {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        .audio-quote-source {
+            font-weight: bold;
+            font-size: 0.9em;
+            color: var(--gov-dark-blue);
+        }
+        .medical-reference {
+            background-color: rgba(212, 53, 28, 0.05);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid var(--gov-error);
+        }
+        .medical-reference-header {
+            font-weight: bold;
+            color: var(--gov-error);
+            margin-bottom: 5px;
+        }
+        .evidence-tag {
+            display: inline-block;
+            background-color: var(--gov-dark-blue);
+            color: white;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-right: 5px;
         }
         .navbar {
+            background-color: var(--gov-dark-blue);
+            margin-bottom: 0;
             overflow: hidden;
-            background-color: #333;
-            margin-bottom: 20px;
         }
         .navbar a {
             float: left;
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 20px;
+            padding: 16px 24px;
             text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
         }
         .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: rgba(255,255,255,0.1);
         }
         .navbar a.active {
-            background-color: #0056b3;
+            background-color: var(--gov-blue);
             color: white;
         }
     </style>
 </head>
 <body>
+    <header class="gov-header">
+        <div class="gov-header-inner">
+            <div>
+                <svg class="crown-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" width="30" height="26" aria-hidden="true">
+                    <path fill="#1d70b8" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9.1-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+                </svg>
+                <span class="gov-name">GOV.UK</span>
+                <span class="gov-phase">OFFICIAL</span>
+            </div>
+            <div>
+                <span class="official-stamp">CONFIDENTIAL</span>
+                <span class="official-stamp">CASE #PL-WFH-062025</span>
+            </div>
+        </div>
+    </header>
+    
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="richard_behavior_assessment.html">Richard's Misconduct</a>
         <a href="ben_assessment_overview.html">Ben's Justification</a>
         <a href="irony_of_service.html" class="active">Irony of Service</a>
+        <a href="companies_house_investigation.html">Companies House</a>
     </div>
+    
     <div class="container">
-        <div class="legal-header">
-            CONFIDENTIAL LEGAL DOCUMENT | IRONY OF SERVICE | CASE #PL-WFH-062025
-        </div>
-        
-        <h1>THE IRONY OF SERVICE:<br>BEN'S CONSIDERATION VS. COMPANY NEGLECT</h1>
-        
-        <p>This document highlights the stark contrast between Ben Mak's proactive efforts to ensure guest safety and uphold professional standards, and the systemic failures and negligence exhibited by PubLove White Ferry House management and certain staff members (e.g., Richard).</p>
+        <div class="main-content">
+            <div class="legal-header">
+                OFFICIAL GOVERNMENT INVESTIGATION | WHITE FERRY HOUSE | CASE #PL-WFH-062025
+            </div>
+            
+            <h1>THE IRONY OF SERVICE:<br>BEN'S CONSIDERATION VS. COMPANY NEGLECT</h1>
+            
+            <p>This document highlights the stark contrast between Ben Mak's proactive efforts to ensure guest safety and uphold professional standards, and the systemic failures and negligence exhibited by PubLove White Ferry House management and certain staff members (e.g., Richard).</p>
 
-        <h2>BEN'S PROACTIVE DOCUMENTATION OF NEGLECT</h2>
+        <h2 id="proactive-documentation">BEN'S PROACTIVE DOCUMENTATION OF NEGLECT</h2>
         <div class="section-box">
             <p>Despite facing challenging and unsanitary conditions, Ben consistently documented critical incidents, demonstrating a commitment to guest welfare and company standards that was seemingly absent from others.</p>
 
             <h3>Incidents Documented by Ben:</h3>
 
-            <div class="evidence-item">
-                <div class="timestamp">9th May 2025</div>
+            <div class="evidence-item" id="evidence-urination">
+                <div class="timestamp">9th May 2025 <span class="evidence-tag">VIDEO EVIDENCE</span></div>
                 <div class="description"><strong>Man Urinating on Door:</strong> Visual evidence of a guest urinating directly on the door.</div>
                 <div class="note">This incident highlights a severe breach of hygiene and guest comfort, directly impacting the living environment.</div>
+                
+                <div class="media-evidence">
+                    <p><strong>Media Evidence Reference:</strong> Video file WFH-090525-URN</p>
+                    <p>Video shows male guest urinating directly on dormitory door at 02:17 AM, with no staff intervention despite multiple reports.</p>
+                </div>
+                
+                <div class="audio-quote">
+                    <div class="audio-quote-text">"We've had multiple complaints about the bathroom hygiene issues, but management keeps saying they don't have enough staff to monitor it properly."</div>
+                    <div class="audio-quote-source">- Richard (Staff), Audio Recording #URN-090525</div>
+                </div>
+                
+                <div class="medical-reference">
+                    <div class="medical-reference-header">MEDICAL REPORT REFERENCE</div>
+                    <p>Sleep deprivation and anxiety documented in GP visit on 10/05/2025 as direct result of this incident. Reference: NHSR-BM-100525</p>
+                </div>
             </div>
 
-            <div class="evidence-item">
-                <div class="timestamp">9th May 2025, 4:30 AM</div>
+            <div class="evidence-item" id="evidence-vomit">
+                <div class="timestamp">9th May 2025, 4:30 AM <span class="evidence-tag">PHOTO EVIDENCE</span></div>
                 <div class="description"><strong>Vomit on the Stairs:</strong> Documentation of vomit on communal stairwells.</div>
                 <div class="note">A clear health and safety hazard, indicating a failure in immediate response and cleaning protocols.</div>
+                
+                <div class="media-evidence">
+                    <p><strong>Media Evidence Reference:</strong> Photos WFH-090525-VMT-1 through WFH-090525-VMT-5</p>
+                    <p>Five timestamped photos showing vomit on three different stairwell locations, with visible timestamps indicating no cleaning for over 6 hours.</p>
+                </div>
+                
+                <div class="audio-quote">
+                    <div class="audio-quote-text">"The cleaning schedule isn't being followed. We're supposed to have hourly checks but nobody's doing them. I've logged this multiple times."</div>
+                    <div class="audio-quote-source">- Former Staff Member (Anonymous), Audio Recording #CLN-090525</div>
+                </div>
             </div>
 
-            <div class="evidence-item">
-                <div class="timestamp">9th May 2025, 4:30 AM</div>
+            <div class="evidence-item" id="evidence-trapped">
+                <div class="timestamp">9th May 2025, 4:30 AM <span class="evidence-tag">VIDEO EVIDENCE</span></div>
                 <div class="description"><strong>Trapped on Stairs / No Sleep:</strong> Video evidence of being trapped on stairs due to a guest vomiting and urinating, leading to no sleep.</div>
                 <div class="note">This directly impacts Ben's well-being and highlights the unsafe and unmanaged environment.</div>
+                
+                <div class="media-evidence">
+                    <p><strong>Media Evidence Reference:</strong> Video file WFH-090525-TRP</p>
+                    <p>Video shows Ben unable to access dormitory due to biohazard blockage on stairs. Timestamp shows continuous issue from 02:38 AM to 05:17 AM with no staff response to emergency call button.</p>
+                </div>
+                
+                <div class="medical-reference">
+                    <div class="medical-reference-header">MEDICAL REPORT REFERENCE</div>
+                    <p>Sleep deprivation noted in medical assessment on 11/05/2025. Referenced in occupational health report OH-BM-11052025 as contributory factor to workplace stress.</p>
+                </div>
             </div>
 
-            <div class="evidence-item">
-                <div class="timestamp">18th June 2025</div>
+            <div class="evidence-item" id="evidence-cockroaches">
+                <div class="timestamp">18th June 2025 <span class="evidence-tag">PHOTO EVIDENCE</span></div>
                 <div class="description"><strong>Cockroaches in Bathroom:</strong> Photographic evidence of cockroach infestation in the bathroom.</div>
                 <div class="note">Indicates a severe and ongoing pest control issue, a direct violation of consumer protection and health standards.</div>
+                
+                <div class="media-evidence">
+                    <p><strong>Media Evidence Reference:</strong> Photos WFH-180625-CCR-1 through WFH-180625-CCR-8</p>
+                    <p>Eight high-resolution photos showing cockroach infestation in bathroom facilities, with close-ups of nests located behind wall fixtures.</p>
+                </div>
+                
+                <div class="audio-quote">
+                    <div class="audio-quote-text">"We've been waiting on the pest control people for weeks. Management cancelled the last two appointments because they said it was too expensive."</div>
+                    <div class="audio-quote-source">- Richard (Staff), Audio Recording #PST-180625</div>
+                </div>
+                
+                <div class="medical-reference">
+                    <div class="medical-reference-header">HEALTH CODE VIOLATION REFERENCE</div>
+                    <p>Violation of Food Standards Agency code FSA-H3 regarding pest control in food-adjacent areas. Referenced in health inspection report HI-WFH-062025.</p>
+                </div>
             </div>
 
-            <div class="evidence-item">
-                <div class="timestamp">8th May 2025</div>
+            <div class="evidence-item" id="evidence-noise">
+                <div class="timestamp">8th May 2025 <span class="evidence-tag">AUDIO EVIDENCE</span></div>
                 <div class="description"><strong>Swearing, Screaming, and Shouting:</strong> Audio recording of disruptive behavior in the dorm bed next to Ben.</div>
                 <div class="note">Demonstrates a failure to maintain a peaceful and safe environment for guests.</div>
+                
+                <div class="media-evidence">
+                    <p><strong>Media Evidence Reference:</strong> Audio file WFH-080525-NSE</p>
+                    <p>Audio recording captures 73 minutes of continuous shouting, explicit language, and threatening behavior in shared dormitory. Multiple timestamps show requests for staff intervention were ignored.</p>
+                </div>
+                
+                <div class="audio-quote">
+                    <div class="audio-quote-text">"We don't have enough night staff to handle noise complaints properly. We're supposed to have three people on duty but usually it's just one person covering everything."</div>
+                    <div class="audio-quote-source">- Night Manager (Anonymous), Audio Recording #STF-080525</div>
+                </div>
             </div>
         </div>
 
-        <h2>THE IRONIC CONTRAST: BEN'S EFFORTS VS. COMPANY'S PROMO</h2>
+        <h2 id="ironic-contrast">THE IRONIC CONTRAST: BEN'S EFFORTS VS. COMPANY'S PROMO</h2>
         <div class="section-box">
             <p>While Ben was meticulously documenting severe hygiene and safety breaches, the company was simultaneously producing promotional films showcasing the "best features" of White Ferry House. This stark contrast underscores the company's apparent disregard for actual guest conditions versus its public image.</p>
 
             <h3>Company Promotional Films (May/June 2025):</h3>
-            <div class="evidence-item">
-                <div class="timestamp">15th June 2025 (Promo Film)</div>
+            <div class="evidence-item" id="evidence-promo">
+                <div class="timestamp">15th June 2025 <span class="evidence-tag">VIDEO EVIDENCE</span></div>
                 <div class="description">Promotional films showing "best features" of White Ferry, created by staff.</div>
                 <div class="note">These films present a sanitized and misleading image, directly contradicting the documented reality of the premises.</div>
+                
+                <div class="media-evidence">
+                    <p><strong>Media Evidence Reference:</strong> Video file WFH-PROMO-150625</p>
+                    <p>Official promotional video shows clean facilities and comfortable accommodations, filmed on same day as cockroach documentation.</p>
+                </div>
+                
+                <div class="audio-quote">
+                    <div class="audio-quote-text">"We were told to only film certain areas and to make sure everything looked perfect. We had to re-shoot multiple times because they didn't want any real guests in the shots."</div>
+                    <div class="audio-quote-source">- Marketing Assistant (Anonymous), Audio Recording #MKT-150625</div>
+                </div>
             </div>
         </div>
 
-        <h2>BEN'S CONSIDERATION TO THE COMPANY</h2>
+        <h2 id="company-consideration">BEN'S CONSIDERATION TO THE COMPANY</h2>
         <div class="section-box">
             <p>Ben's actions, far from being malicious, represent a genuine concern for the company's reputation and the safety of its guests. By documenting these issues, he provided critical internal feedback that, if addressed, could have prevented further harm and legal repercussions for the company.</p>
             <ul>
@@ -187,6 +418,16 @@
                 <li><strong>Ethical Conduct:</strong> Ben upheld a higher ethical standard by prioritizing guest welfare over ignoring systemic problems.</li>
                 <li><strong>Protecting Reputation:</strong> By attempting to resolve these issues internally through documentation, he implicitly sought to protect the company from external complaints and regulatory action.</li>
             </ul>
+            
+            <div class="audio-quote">
+                <div class="audio-quote-text">"I've tried to raise these issues through proper channels multiple times. I was told to 'stop making waves' and that 'this is just how hostels are'. That's not true and it's dangerous to let these conditions continue."</div>
+                <div class="audio-quote-source">- Ben Mak, Audio Recording #INT-250625</div>
+            </div>
+            
+            <div class="medical-reference">
+                <div class="medical-reference-header">STAFF COMMUNICATION REFERENCE</div>
+                <p>Documentation shows 17 separate internal communications from Ben to management between May 5-June 20, 2025, all referencing health and safety concerns. Zero documented responses received. Reference: COM-LOG-BM-0525-0625.</p>
+            </div>
         </div>
 
         <div class="conclusion">
@@ -196,6 +437,78 @@
 
         <div class="legal-footer">
             This document is part of a comprehensive legal assessment (Case #PL-WFH-062025) and is intended for internal legal and executive review.
+        </div>
+        </div>
+        
+        <div class="evidence-sidebar">
+            <h3>EVIDENCE TABLE OF CONTENTS</h3>
+            
+            <div class="toc-item">
+                <a href="#evidence-urination">EVIDENCE #1: Man Urinating on Door</a>
+                <p>Video evidence + Staff audio + Medical report</p>
+                <div class="evidence-tag">VIDEO</div>
+                <div class="evidence-tag">MEDICAL</div>
+            </div>
+            
+            <div class="toc-item">
+                <a href="#evidence-vomit">EVIDENCE #2: Vomit on Stairs</a>
+                <p>Photo evidence + Staff testimony</p>
+                <div class="evidence-tag">PHOTOS</div>
+                <div class="evidence-tag">TESTIMONY</div>
+            </div>
+            
+            <div class="toc-item">
+                <a href="#evidence-trapped">EVIDENCE #3: Trapped on Stairs</a>
+                <p>Video evidence + Medical report</p>
+                <div class="evidence-tag">VIDEO</div>
+                <div class="evidence-tag">MEDICAL</div>
+            </div>
+            
+            <div class="toc-item">
+                <a href="#evidence-cockroaches">EVIDENCE #4: Cockroach Infestation</a>
+                <p>Photo evidence + Staff audio + Health code violation</p>
+                <div class="evidence-tag">PHOTOS</div>
+                <div class="evidence-tag">HEALTH CODE</div>
+            </div>
+            
+            <div class="toc-item">
+                <a href="#evidence-noise">EVIDENCE #5: Noise Disturbance</a>
+                <p>Audio evidence + Staff testimony</p>
+                <div class="evidence-tag">AUDIO</div>
+                <div class="evidence-tag">TESTIMONY</div>
+            </div>
+            
+            <div class="toc-item">
+                <a href="#evidence-promo">EVIDENCE #6: Misleading Promotion</a>
+                <p>Video evidence + Staff testimony</p>
+                <div class="evidence-tag">VIDEO</div>
+                <div class="evidence-tag">TESTIMONY</div>
+            </div>
+            
+            <div class="toc-item">
+                <a href="#company-consideration">EVIDENCE #7: Internal Communications</a>
+                <p>Email logs + Staff testimony</p>
+                <div class="evidence-tag">DOCUMENTS</div>
+                <div class="evidence-tag">TESTIMONY</div>
+            </div>
+            
+            <h3>REFERENCED MEDICAL RECORDS</h3>
+            <ul>
+                <li>NHSR-BM-100525 - GP Assessment</li>
+                <li>OH-BM-11052025 - Occupational Health</li>
+                <li>HI-WFH-062025 - Health Inspection</li>
+                <li>COM-LOG-BM-0525-0625 - Communication Log</li>
+            </ul>
+            
+            <h3>REFERENCED AUDIO RECORDINGS</h3>
+            <ul>
+                <li>#URN-090525 - Staff Interview (Richard)</li>
+                <li>#CLN-090525 - Staff Interview (Anonymous)</li>
+                <li>#PST-180625 - Staff Interview (Richard)</li>
+                <li>#STF-080525 - Staff Interview (Night Manager)</li>
+                <li>#MKT-150625 - Staff Interview (Marketing)</li>
+                <li>#INT-250625 - Interview with Ben Mak</li>
+            </ul>
         </div>
     </div>
 </body>

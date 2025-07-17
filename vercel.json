@@ -1,9 +1,27 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.mp3",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.m4a",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/",
-      "dest": "/richard_behavior_assessment.html"
+      "dest": "/index.html"
+    },
+    {
+      "src": "/companies-house",
+      "dest": "/companies_house_investigation.html"
     },
     {
       "src": "/(.*)",

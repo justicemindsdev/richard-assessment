@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Persistence App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-center text-gray-800">GitHub Persistence App</h1>
+            <p class="text-center text-gray-600 mt-2">Store and retrieve data using GitHub repositories</p>
+        </header>
+
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Repository Information</h2>
+            <div class="mb-4">
+                <label for="owner" class="block text-gray-700 mb-2">Repository Owner</label>
+                <input type="text" id="owner" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="e.g., octocat">
+            </div>
+            <div class="mb-4">
+                <label for="repo" class="block text-gray-700 mb-2">Repository Name</label>
+                <input type="text" id="repo" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="e.g., hello-world">
+            </div>
+            <div class="mb-4">
+                <label for="branch" class="block text-gray-700 mb-2">Branch (default: main)</label>
+                <input type="text" id="branch" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="e.g., main">
+            </div>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Data Management</h2>
+            <div class="mb-4">
+                <label for="path" class="block text-gray-700 mb-2">File Path</label>
+                <input type="text" id="path" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="e.g., data/mydata.json">
+            </div>
+            <div class="mb-4">
+                <label for="content" class="block text-gray-700 mb-2">Content</label>
+                <textarea id="content" rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Enter your data here (JSON recommended)"></textarea>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <button id="saveBtn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Save Data</button>
+                <button id="loadBtn" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Load Data</button>
+                <button id="createBtn" class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700">Create Repository</button>
+            </div>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Response</h2>
+            <pre id="response" class="bg-gray-100 p-4 rounded-md overflow-x-auto">Results will appear here</pre>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('saveBtn').addEventListener('click', async () => {
+            const owner = document.getElementById('owner').value;
+            const repo = document.getElementById('repo').value;
+            const path = document.getElementById('path').value;
+            const branch = document.getElementById('branch').value || 'main';
+            const content = document.getElementById('content').value;
+            
+            if (!owner || !repo || !path || !content) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/github/save', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ owner, repo, path, branch, content })
+                });
+                
+                const data = await response.json();
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('response').textContent = `Error: ${error.message}`;
+            }
+        });
+        
+        document.getElementById('loadBtn').addEventListener('click', async () => {
+            const owner = document.getElementById('owner').value;
+            const repo = document.getElementById('repo').value;
+            const path = document.getElementById('path').value;
+            const branch = document.getElementById('branch').value || 'main';
+            
+            if (!owner || !repo || !path) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/github/load?owner=${owner}&repo=${repo}&path=${path}&branch=${branch}`);
+                const data = await response.json();
+                
+                if (data.content) {
+                    document.getElementById('content').value = data.content;
+                }
+                
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('response').textContent = `Error: ${error.message}`;
+            }
+        });
+        
+        document.getElementById('createBtn').addEventListener('click', async () => {
+            const owner = document.getElementById('owner').value;
+            const repo = document.getElementById('repo').value;
+            
+            if (!repo) {
+                alert('Please enter a repository name');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/github/create-repo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name: repo, private: true, autoInit: true })
+                });
+                
+                const data = await response.json();
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('response').textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>
