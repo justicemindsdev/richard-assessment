@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME: WHITE FERRY STAFF MISCONDUCT</title>
+    <title>OFFICIAL REPORT: WHITE FERRY STAFF MISCONDUCT</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: "Times New Roman", serif; /* More formal font */
+            line-height: 1.8; /* Increased line height for readability */
             margin: 0;
             padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #e9e9e9; /* Lighter background for official feel */
+            color: #222;
         }
         .navbar {
             overflow: hidden;
@@ -34,6 +34,25 @@
             background-color: #4CAF50; /* Green for Home */
             color: white;
         }
+        .header-banner {
+            background-color: #1a2a4a; /* Dark blue for official banner */
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border-bottom: 5px solid #0056b3;
+        }
+        .disclaimer {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -43,33 +62,41 @@
             border-left: 5px solid #4CAF50; /* Green border for Home page */
         }
         h1 {
-            color: #4CAF50;
+            color: #1a2a4a; /* Dark blue for headings */
             text-align: center;
             margin-bottom: 30px;
             font-size: 28px;
             text-transform: uppercase;
         }
         h2 {
-            color: #4CAF50;
-            border-bottom: 2px solid #4CAF50;
+            color: #1a2a4a;
+            border-bottom: 2px solid #1a2a4a;
             padding-bottom: 5px;
             margin-top: 30px;
+        }
+        h3 {
+            color: #1a2a4a;
+            margin-top: 20px;
         }
         .section-box {
             margin-bottom: 20px;
             padding: 15px;
-            background-color: #e6ffe6; /* Light green background */
-            border-left: 4px solid #4CAF50;
+            background-color: #f2f2f2; /* Slightly darker background for sections */
+            border-left: 4px solid #1a2a4a;
         }
         .evidence-item {
             margin-bottom: 15px;
             padding: 10px;
-            background-color: #f2fff2;
-            border-left: 3px solid #4CAF50;
+            background-color: #ffffff;
+            border-left: 3px solid #0056b3;
+            cursor: pointer; /* Indicate clickable */
+        }
+        .evidence-item:hover {
+            background-color: #e6f2ff;
         }
         .timestamp {
             font-weight: bold;
-            color: #4CAF50;
+            color: #0056b3;
             margin-bottom: 5px;
         }
         .description {
@@ -83,7 +110,7 @@
         .conclusion {
             margin-top: 30px;
             padding: 15px;
-            background-color: #4CAF50;
+            background-color: #1a2a4a;
             color: white;
             font-weight: bold;
             text-align: center;
@@ -94,19 +121,56 @@
             font-size: 12px;
             color: #666;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px 0;
-            border: 1px solid #ddd;
+        /* Modal for image/video display */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
         }
-        video {
-            max-width: 100%;
-            height: auto;
+        .modal-content {
+            margin: 15% auto; /* 15% from the top and centered */
             display: block;
-            margin: 10px 0;
-            border: 1px solid #ddd;
+            width: 80%; /* Could be more or less, depending on screen size */
+            max-width: 700px;
+        }
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
         }
     </style>
 </head>
@@ -116,45 +180,161 @@
         <a href="richard_behavior_assessment.html">Richard's Misconduct</a>
         <a href="ben_assessment_overview.html">Ben's Justification</a>
         <a href="irony_of_service.html">Irony of Service</a>
+        <a href="about_ben.html">About Ben Mak</a>
+        <a href="evidence_compilation.html">Evidence Compilation</a>
+    </div>
+    <div class="header-banner">
+        OFFICIAL REPORT: CASE #PL-WFH-062025 | WHITE FERRY STAFF MISCONDUCT
+    </div>
+    <div class="disclaimer">
+        <strong>CONFIDENTIALITY NOTICE:</strong> This document contains sensitive information pertaining to a safeguarding investigation. Unauthorized dissemination is strictly prohibited.
     </div>
     <div class="container">
-        <div class="legal-header">
-            CONFIDENTIAL LEGAL DOCUMENT | HOME PAGE | CASE #PL-WFH-062025
-        </div>
+        <h1>EXECUTIVE SUMMARY: <br>SYSTEMIC MISCONDUCT AT PUBLOVE WHITE FERRY HOUSE</h1>
         
-        <h1>WHITE FERRY STAFF MISCONDUCT: <br>INSISTENT PAY PRESSURE, SURVEILLANCE, SELECTIVE TARGETING, AND REPORTING VULNERABLE ADULTS</h1>
-        
-        <p>This portal serves as a comprehensive documentation of the severe misconduct and systemic failures at PubLove White Ferry House. It highlights instances of staff negligence, targeted harassment, and the alarming disregard for vulnerable guests, despite proactive efforts by concerned individuals like Ben Mak.</p>
+        <p>This official report provides a comprehensive overview of documented severe misconduct and systemic failures observed at PubLove White Ferry House. It highlights critical instances of staff negligence, targeted harassment, and a profound disregard for the safety and well-being of vulnerable guests, despite the diligent and ethical interventions by concerned individuals like Ben Mak.</p>
 
-        <h2>KEY INCIDENT: THE URINE MAN AT THE DOOR</h2>
+        <h2>PRIMARY INCIDENT: UNAUTHORIZED URINATION AT GUEST ACCOMMODATION</h2>
         <div class="section-box">
-            <p>One of the most egregious examples of the unsafe and unsanitary environment at White Ferry House is the incident involving a man urinating directly at a guest's door. This event, coupled with the subsequent lack of appropriate response from staff and management, underscores a profound failure in duty of care and basic hospitality standards.</p>
+            <p>On 9th May 2025, a critical breach of hygiene and guest security occurred, involving an individual urinating directly at a guest's door. This incident, corroborated by visual evidence, underscores a severe failure in premises management and immediate response protocols, creating an intolerable and unsanitary living condition.</p>
 
-            <div class="evidence-item">
-                <div class="timestamp">9th May 2025</div>
-                <div class="description"><strong>Visual Evidence:</strong> A guest captured photographic and video evidence of a man urinating at the door.</div>
-                <div class="note">This incident is a direct indicator of compromised hygiene and security, creating an intolerable living condition for guests.</div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/9311D711-E81D-4A6A-A2A6-39FE03EF0B4E_2/OTMYCY8VQMUIXGFxO2wyQjqCeYjESt5JgzrcL5Qzx80z/Image.jpeg', 'Image: Man Urinating at Door', 'image')">
+                <div class="timestamp">DATE: 2025-05-09 | INCIDENT: Unauthorized Urination</div>
+                <div class="description"><strong>EVIDENCE:</strong> Photographic documentation of an individual urinating at the entrance to guest accommodation. Click to view.</div>
+                <div class="note">This incident is indicative of a critical lapse in security and environmental management, directly impacting guest safety and comfort.</div>
             </div>
-            <p>This incident is not isolated but symptomatic of a broader pattern of neglect and mismanagement, where staff are seemingly under pressure to ignore critical issues, leading to a hostile environment for both guests and ethical employees.</p>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/BEAC56CC-F42A-48C4-9787-FBC82C3454B1_2/jr961LDk6JzpxTtasJcyFRAEDW2Fa9iMnReeGGTKpGUz/IMG_7042.MOV', 'Video: Man Urinating at Door (4 AM)', 'video')">
+                <div class="timestamp">DATE: 2025-05-09 | INCIDENT: Unauthorized Urination (Video)</div>
+                <div class="description"><strong>EVIDENCE:</strong> Video documentation of an individual urinating at the entrance to guest accommodation. Click to view.</div>
+                <div class="note">Further corroboration of the severe hygiene and security breach.</div>
+            </div>
+            <p>This incident is not an isolated occurrence but is symptomatic of a broader pattern of operational deficiencies and a culture where critical issues are either overlooked or deliberately unaddressed, leading to a compromised environment for both guests and ethical personnel.</p>
         </div>
 
-        <h2>SYSTEMIC ISSUES AT WHITE FERRY</h2>
+        <h2>ANALYSIS OF SYSTEMIC MALPRACTICES</h2>
         <div class="section-box">
-            <h3>Insistent Pay Pressure & Surveillance:</h3>
-            <p>Reports indicate that staff at White Ferry are subjected to insistent pay pressure, which may contribute to a culture where critical issues are overlooked or deliberately ignored to cut costs. This is compounded by an environment of surveillance, where staff actions are monitored, potentially leading to selective targeting of individuals who attempt to uphold ethical standards or report misconduct.</p>
+            <h3>Undue Financial Pressure & Covert Surveillance:</h3>
+            <p>Evidence suggests that staff members at White Ferry are subjected to undue financial pressures, which may foster an environment conducive to the neglect of critical operational and safeguarding protocols. This is exacerbated by an apparent culture of covert surveillance, where employee actions are monitored, potentially leading to the selective targeting of individuals who adhere to ethical standards or report observed misconduct.</p>
 
-            <h3>Selective Targeting and Reporting of Vulnerable Adults:</h3>
-            <p>There is evidence suggesting a disturbing pattern of selective targeting and inappropriate reporting of vulnerable adults. Instead of addressing the root causes of issues, the focus appears to shift to blaming or misrepresenting the actions of those who are either vulnerable or who attempt to intervene responsibly. This creates a dangerous precedent and a hostile environment for both guests and staff who prioritize safety and ethical conduct.</p>
+            <h3>Targeted Victimization and Misrepresentation of Vulnerable Individuals:</h3>
+            <p>A disturbing pattern of targeted victimization and inappropriate reporting concerning vulnerable adults has been identified. Instead of addressing the fundamental causes of reported issues, there appears to be a systemic redirection of accountability towards blaming or misrepresenting the actions of vulnerable individuals or those who responsibly intervene. This practice establishes a dangerous precedent, fostering a hostile environment for both patrons and staff committed to safety and ethical conduct.</p>
+            
+            <h3>Additional Documented Incidents:</h3>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/25FCC44D-E9FC-4562-9715-1C10D2994AD7_2/VH0apjdhFDicKWDWGbGXacapvoCM08e87P88S9Kza3Qz/Files%20from%20iOS.mov', 'Video: Vomit on the Stairs (4:30 AM)', 'video')">
+                <div class="timestamp">DATE: 2025-05-09, 4:30 AM | INCIDENT: Vomit on Stairs</div>
+                <div class="description"><strong>EVIDENCE:</strong> Video documentation of vomit present on communal stairwells. Click to view.</div>
+                <div class="note">A clear health and safety hazard, indicating a failure in immediate response and cleaning protocols.</div>
+            </div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/98E44F4C-A4DD-4454-A750-28797EA9D658_2/sjN0reVqhJ61FXuNYMNbaGuaYVZxHcFvu1N5xhdkOxsz/IMG_7043.MOV', 'Video: Vomiting Noises (4:15 AM)', 'video')">
+                <div class="timestamp">DATE: 2025-05-09, 4:30 AM | INCIDENT: Vomiting Noises</div>
+                <div class="description"><strong>EVIDENCE:</strong> Video documentation of vomiting noises. Click to view.</div>
+                <div class="note">Further corroboration of the unsanitary conditions and lack of timely intervention.</div>
+            </div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/F05CF5D6-45E3-4187-8906-A15006D1DA37_2/vDI894yFeMe1rhor0uKcOTYqBWU0o2r63DqrJQarOvUz/IMG_7044.MOV', 'Video: Trapped on Stairs (4:30 AM)', 'video')">
+                <div class="timestamp">DATE: 2025-05-09, 4:30 AM | INCIDENT: Trapped on Stairs</div>
+                <div class="description"><strong>EVIDENCE:</strong> Video documentation of being trapped on stairs due to unsanitary conditions. Click to view.</div>
+                <div class="note">Direct impact on guest safety and freedom of movement within the premises.</div>
+            </div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/4EC1273A-592D-413C-A2E0-544B9F79F5E7_2/0mE29Huh2FNhEd5BObNpBNHCAWav6ETUQiIwmVIyGWwz/IMG_7045.MOV', 'Video: No Sleep Due to Conditions', 'video')">
+                <div class="timestamp">DATE: 2025-05-09 | INCIDENT: No Sleep Due to Conditions</div>
+                <div class="description"><strong>EVIDENCE:</strong> Video documentation of inability to sleep due to unsanitary and disruptive conditions. Click to view.</div>
+                <div class="note">Highlights the severe impact on guest well-being and the failure to provide habitable accommodation.</div>
+            </div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/AA084229-CC51-4AD6-9926-AE1DF66B4A54_2/3piIJPhTDymauV8WJNys75l92Lop2tQW1sjx3L2Qu40z/IMG_7920.jpeg', 'Image: Vomiting on Stairs (Image)', 'image')">
+                <div class="timestamp">DATE: 2025-05-09 | INCIDENT: Vomiting on Stairs (Image)</div>
+                <div class="description"><strong>EVIDENCE:</strong> Photographic documentation of vomit on the stairs. Click to view.</div>
+                <div class="note">Visual confirmation of the unsanitary conditions.</div>
+            </div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/BC14F23E-F4B0-4B59-9890-A928817B98BF_2/QYdlXlKatycJZos0DUjsyNNpsUJIsfqPhntldqLV0acz/IMG_7925.jpeg', 'Image: Cockroaches in Bathroom (Image 1)', 'image')">
+                <div class="timestamp">DATE: 2025-06-18 | INCIDENT: Cockroaches in Bathroom</div>
+                <div class="description"><strong>EVIDENCE:</strong> Photographic documentation of cockroach infestation in the bathroom. Click to view.</div>
+                <div class="note">Indicates a severe and ongoing pest control issue, a direct violation of consumer protection and health standards.</div>
+            </div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/BC6BED8C-78AD-414A-BCF6-A66AC80CC34E_2/zHpxuKtmJm15EzqAOv7uGx54pXjnmCneS6yyxYFyQE4z/IMG_7926.jpeg', 'Image: Cockroaches in Bathroom (Image 2)', 'image')">
+                <div class="timestamp">DATE: 2025-06-18 | INCIDENT: Cockroaches in Bathroom (Image 2)</div>
+                <div class="description"><strong>EVIDENCE:</strong> Additional photographic documentation of cockroach infestation. Click to view.</div>
+                <div class="note">Further corroboration of the severe pest issue.</div>
+            </div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/9B75E6B0-C2DC-4B09-B249-7FA0C700518D_2/jVmbr4KNXIxBbY9mbQmwxyDbrejsedOyZLyDsxfyqKMz/Cockroaches%202025%20JUNE%20.MOV', 'Video: Cockroaches (June 2025)', 'video')">
+                <div class="timestamp">DATE: 2025-06-15 | INCIDENT: Cockroaches (Video)</div>
+                <div class="description"><strong>EVIDENCE:</strong> Video documentation of cockroach infestation. Click to view.</div>
+                <div class="note">Dynamic visual proof of the ongoing pest problem.</div>
+            </div>
+            <div class="evidence-item" onclick="openModal('https://res.craft.do/user/full/bcd76698-addf-9a43-c585-f28c52dbbebe/doc/536b44f0-82d6-9449-cdf8-63f523b3c14d/A4E9A805-933A-4A34-8FA5-75B42F98E251_2/xx4uwBW1pyiX1mywb4amFjli7Rs9Jy2z5gpIuqiO6ssz/2025-05-07%20white%20ferry%20shouting%20swearing.m4a', 'Audio: Shouting and Swearing (May 2025)', 'audio')">
+                <div class="timestamp">DATE: 2025-05-08 | INCIDENT: Disruptive Behavior</div>
+                <div class="description"><strong>EVIDENCE:</strong> Audio recording of swearing, screaming, and shouting in the dorm. Click to listen.</div>
+                <div class="note">Demonstrates a failure to maintain a peaceful and safe environment for guests.</div>
+            </div>
         </div>
 
         <div class="conclusion">
-            <h3>CALL TO ACTION</h3>
-            <p>This documentation serves as a critical resource for legal review, regulatory bodies, and public awareness. It is imperative that these systemic failures are addressed to ensure the safety and well-being of all guests and to protect ethical staff members from unjust targeting and retaliation.</p>
+            <h3>IMPERATIVE FOR IMMEDIATE INTERVENTION</h3>
+            <p>This comprehensive documentation serves as a critical evidentiary resource for regulatory bodies, legal review, and public accountability. It is unequivocally imperative that these systemic failures are addressed with immediate and decisive action to ensure the safety, dignity, and well-being of all guests, and to safeguard ethical staff members from unjust targeting and professional retaliation.</p>
         </div>
 
         <div class="legal-footer">
             This document is part of a comprehensive legal assessment (Case #PL-WFH-062025) and is intended for internal legal and executive review.
         </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" style="display: none;">
+        <video class="modal-content" id="modalVideo" controls style="display: none;"></video>
+        <audio class="modal-content" id="modalAudio" controls style="display: none;"></audio>
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modalImage = document.getElementById("modalImage");
+        var modalVideo = document.getElementById("modalVideo");
+        var modalAudio = document.getElementById("modalAudio");
+        var captionText = document.getElementById("caption");
+
+        function openModal(src, caption, type) {
+            modal.style.display = "block";
+            modalImage.style.display = "none";
+            modalVideo.style.display = "none";
+            modalAudio.style.display = "none";
+
+            if (type === 'image') {
+                modalImage.src = src;
+                modalImage.style.display = "block";
+            } else if (type === 'video') {
+                modalVideo.src = src;
+                modalVideo.style.display = "block";
+                modalVideo.load(); // Load the video
+                modalVideo.play(); // Autoplay the video
+            } else if (type === 'audio') {
+                modalAudio.src = src;
+                modalAudio.style.display = "block";
+                modalAudio.load(); // Load the audio
+                modalAudio.play(); // Autoplay the audio
+            }
+            captionText.innerHTML = caption;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+            modalVideo.pause(); // Pause video when closing
+            modalAudio.pause(); // Pause audio when closing
+        }
+
+        // When the user clicks anywhere outside of the modal content, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                modalVideo.pause(); // Pause video when clicking outside
+                modalAudio.pause(); // Pause audio when clicking outside
+            }
+        }
+    </script>
 </body>
 </html>

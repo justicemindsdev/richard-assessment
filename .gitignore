@@ -39,3 +39,4 @@ temp/
 *.ogg
 *.m4a
 *.pdf
+.vercel
