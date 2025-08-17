@@ -5,8 +5,12 @@ require('dotenv').config();
 
 class GrainAPIClient {
     constructor() {
-        this.personalToken = process.env.GRAIN_PERSONAL_TOKEN || 'grain_pat_cXNKHgNo_1LXH3wzmg1pAtHmIl6BBzh5oF3j0eN7LhajWGmc1';
-        this.workspaceToken = process.env.GRAIN_WORKSPACE_TOKEN || 'grain_wat_GDTI1y87_2sVXSyYWxqaIgMMueXezv2muoztmssA8GaqPdxMM';
+        this.personalToken = process.env.GRAIN_PERSONAL_TOKEN;
+        this.workspaceToken = process.env.GRAIN_WORKSPACE_TOKEN;
+        
+        if (!this.personalToken || !this.workspaceToken) {
+            throw new Error('GRAIN_PERSONAL_TOKEN and GRAIN_WORKSPACE_TOKEN must be set in .env file');
+        }
         this.baseURL = 'https://api.grain.com/_/public-api';
     }
 
