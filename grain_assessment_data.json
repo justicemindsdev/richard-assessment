@@ -1,0 +1,1468 @@
+{
+  "recordings": [
+    {
+      "id": "a6da2b5b-4a85-46f2-9e74-d5f9b0741504",
+      "title": "2025-06-27 Ben and 62 yearold man ZACK | PubLove_White_Ferry_House_Victoria_combined",
+      "owners": [
+        "consult@justice-minds.com"
+      ],
+      "source": "upload",
+      "url": "https://grain.com/share/recording/a6da2b5b-4a85-46f2-9e74-d5f9b0741504/LAzbC75GWT8AAYmUUl35s3dyYRv7wm9yJRpq4TA8",
+      "tags": [],
+      "summary": "The call transcript reveals a discussion between Ben Mak, the CEO of Justice Minds Forensic Intelligence, and several other individuals, including a 62-year-old man named Zack White from the PubLove White Ferry House Victoria. The conversation covers a range of topics, including frustrations over Ben Mak being barred from the establishment, concerns about the treatment of the 62-year-old man, the impact of autism on Ben's interactions, and discussions around judicial independence and legal challenges. The dialogue also touches on communication issues with staff, homelessness concerns, personal challenges, and light-hearted banter. Overall, the transcript highlights the complexities and challenges faced by Ben Mak's data-driven advocacy business as it navigates legal and interpersonal matters.",
+      "start_datetime": "2025-07-07T12:10:51Z",
+      "end_datetime": "2025-07-07T13:05:38Z",
+      "participants": [
+        {
+          "id": "ce6c4e04-8a93-45af-87d3-f404d2658369",
+          "name": "62 Year old Man",
+          "scope": "unknown",
+          "email": null,
+          "confirmed_attendee": true,
+          "hs_contact_id": null
+        },
+        {
+          "id": "80d30036-88ab-4b90-88d2-63a690c5eecf",
+          "name": "Zack White ferry pub",
+          "scope": "unknown",
+          "email": null,
+          "confirmed_attendee": true,
+          "hs_contact_id": null
+        },
+        {
+          "id": "2c1612e8-92e8-4df3-8bd5-8371088f217d",
+          "name": "Ben Mak",
+          "scope": "internal",
+          "email": "consult@benmaklondon.com",
+          "confirmed_attendee": true,
+          "hs_contact_id": null
+        }
+      ],
+      "hubspot_company_ids": [],
+      "hubspot_deal_ids": [],
+      "summary_points": [
+        {
+          "timestamp": 880,
+          "text": "Ben Mak is frustrated about being barred. Zack White suggests discussing issues with head office. Ben feels communication was lacking."
+        },
+        {
+          "timestamp": 284020,
+          "text": "Ben Mak seeks clarity on barring reasons. Zack White cannot disclose details. Ben emphasizes fair treatment for individuals."
+        },
+        {
+          "timestamp": 450190,
+          "text": "Ben Mak shares how autism affects interactions. He is frustrated by the lack of communication. Limited contact information increases his concerns."
+        },
+        {
+          "timestamp": 742420,
+          "text": "Ben Mak discusses judges' protection actions. He emphasizes the importance of judicial independence. A specific case illustrates external pressures on legal professionals."
+        },
+        {
+          "timestamp": 1072430,
+          "text": "Ben Mak expresses frustration over staff communication. He discusses a blocked room access incident. Issues impact his business operations and well-being."
+        },
+        {
+          "timestamp": 1296940,
+          "text": "Ben Mak is concerned about homelessness issues. He emphasizes the illegality of such actions. He requests clarity on withheld personal data."
+        },
+        {
+          "timestamp": 1461810,
+          "text": "Ben Mak shares personal challenges after his brother's death. The conversation includes light-hearted banter and humor."
+        },
+        {
+          "timestamp": 1787910,
+          "text": "Participants engage in fragmented exchanges. The dialogue lacks a clear topic or theme."
+        },
+        {
+          "timestamp": 2196310,
+          "text": "The 62 Year Old Man expresses uncertainty. This section lacks substantial content."
+        },
+        {
+          "timestamp": 2400630,
+          "text": "An unidentified speaker makes a statement. The conversation transitions to another topic."
+        },
+        {
+          "timestamp": 2654400,
+          "text": "A participant communicates a farewell. The conversation concludes with a sense of closure."
+        },
+        {
+          "timestamp": 2758050,
+          "text": "Ben Mak emphasizes health and fitness importance. He humorously mentions maintaining the Internet connection."
+        },
+        {
+          "timestamp": 2952839,
+          "text": "Participants discuss laundry services and pricing. Ben Mak prefers Elephant and Castle as a workspace."
+        },
+        {
+          "timestamp": 3231260,
+          "text": "Ben Mak expresses confusion about bus routes. He indicates a need for internet access for assistance."
+        }
+      ],
+      "public_thumbnail_url": "https://media.grain.com/public_thumbnails/recordings/YTZkYTJiNWItNGE4NS00NmYyLTllNzQtZDVmOWIwNzQxNTA0OkxBemJDNzVHV1Q4QUFZbVVVbDM1czNkeVlSdjd3bTl5SlJwcTRUQTg=",
+      "public_url": "https://grain.com/share/recording/a6da2b5b-4a85-46f2-9e74-d5f9b0741504/LAzbC75GWT8AAYmUUl35s3dyYRv7wm9yJRpq4TA8",
+      "transcript_json_url": "https://grain.com/_/public-api/recordings/a6da2b5b-4a85-46f2-9e74-d5f9b0741504/transcript",
+      "transcript_srt_url": "https://grain.com/_/public-api/recordings/a6da2b5b-4a85-46f2-9e74-d5f9b0741504/transcript.srt",
+      "transcript_txt_url": "https://grain.com/_/public-api/recordings/a6da2b5b-4a85-46f2-9e74-d5f9b0741504/transcript.txt",
+      "transcript_vtt_url": "https://grain.com/_/public-api/recordings/a6da2b5b-4a85-46f2-9e74-d5f9b0741504/transcript.vtt",
+      "customTitle": "Zac and Ben Interaction - Staff Discussion",
+      "shareUrl": "https://grain.com/share/recording/a6da2b5b-4a85-46f2-9e74-d5f9b0741504/LAzbC75GWT8AAYmUUl35s3dyYRv7wm9yJRpq4TA8"
+    }
+  ],
+  "transcripts": [
+    [
+      {
+        "start": 880,
+        "text": "For many reasons",
+        "end": 1920,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 8240,
+        "text": "but we'll soon find out. You're later",
+        "end": 11520,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 24000,
+        "text": "I don't know but I'm going to find out because I want to know for what reason. I've only not. I've only not come back because I've messaged as I say a nice message. What's going on? Can we just sort this out and just know. No reply whatsoever at all.",
+        "end": 42060,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 46620,
+        "text": "So just want to say cuz you've said this in front of a third party so whatever reputation is trying to maintain is now damaged. So I just am a bit confused under what grounds that you just pulling me in front of a guest not privately with a bit of humanity but in front to be guests as I'm just checking in on them as this was the guest that got kicked out by your team at 2 in the morning and was wandering the streets till.",
+        "end": 70760,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 70760,
+        "text": "5Am I don't know anything about.",
+        "end": 72080,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 72080,
+        "text": "Well you. Well that's what I'm saying. But why do you all know something about me? Who was helping your guests but now is being barred simultaneously.",
+        "end": 78680,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 78840,
+        "text": "This is everything that you're talking about you're going to discuss with Liberty.",
+        "end": 82760,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 82760,
+        "text": "But listen to me. I was just checking on this young gentleman because last time I was here he got kicked out. He was given wrong information by your team that he couldn't stay. He was under the post so he was wandering the street 62 year old man at 2,345am and I raised a concern of this this man's safety to which you got laughed at in the face by your team member. Laughed at in the face I've not been in since because I feel uncomfortable now you've come to me in front of the same person. I'm really sorry about this. You didn't deserve this. It should have been done privately and barbed me, threw me stuff at me and said I can't tell you why you're being barred when all I have done is help every single member of staff in here and I can prove it with every single letter I've wrote for all of them to help them with the grievances and the way they speak about this place. I don't speak about this place like that.",
+        "end": 141980,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 142860,
+        "text": "And this is everything that you are welcome to discuss at that office.",
+        "end": 146780,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 147260,
+        "text": "But discuss what? Everything that you talk about why but you. You can't just bar me and not.",
+        "end": 153060,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 153060,
+        "text": "Tell me why you were born a few days ago.",
+        "end": 154780,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 156220,
+        "text": "What's wrong with the call as far as I'm.",
+        "end": 159520,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 159520,
+        "text": "But I don't.",
+        "end": 160040,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 160280,
+        "text": "You have all got me number.",
+        "end": 161480,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 162680,
+        "text": "I don't have Your number?",
+        "end": 163560,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 163960,
+        "text": "Hi Ben, can you just come in? We'd like to speak to you please. Yeah, what's it about? Just pop in and we can have a chat then.",
+        "end": 169400,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 169640,
+        "text": "I personally can do that. I don't have enough.",
+        "end": 171400,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 171880,
+        "text": "But you've got my details on the system.",
+        "end": 173880,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 174760,
+        "text": "Have your email, but then have a look.",
+        "end": 176120,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 176280,
+        "text": "But why is an even email. You okay, Ben, Sorry to bother you, can you pop in please? Cuz I have just been to my brother's funeral so I'm just a bit confused what all this targeting is. I'm not trying to target, I've been targeted.",
+        "end": 188400,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 188400,
+        "text": "If you feel targeted, I'm very sorry. That is not my intention.",
+        "end": 190980,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 191060,
+        "text": "All ears are talking about me, but not to me, that's harassment.",
+        "end": 194420,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 196660,
+        "text": "I know for a fact.",
+        "end": 197500,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 197500,
+        "text": "Especially when I've emailed it, when I've messaged in to try and clear the air. Hi, can we have a little chat? I don't know what's going on but I'd really like to speak about it when I've been informed by you to contact you if I want to speak about anything. So we did that. Stonewalled. The day I made a complaint same or wanted to make it a concern. The same person arbitrary said, can Ben be here? No, Ben's just raised the complaint of us kicking a 62 year old man on the street and some man crying the night before being forced out when there was 10 spare beds. I'm trying to help put these fires down. Literally put the fires down. Couldn't go to bed because someone pissed on me. Door. Someone was weeing on the door. I didn't complain about it or send the pictures in. I had to film it to prove it. And I'm getting barred when I'm not raising complaints of someone pissing on the door and there being bed bugs in the same room.",
+        "end": 250940,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 251740,
+        "text": "If you would like to discuss these issues.",
+        "end": 253500,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 253660,
+        "text": "Did you understand where I'm coming from? I've made this, I've made pro, I've made promotion videos, I've made pr. I've done all sorts and don't understand the secrecy and then the army back plans conspiracy. When a conspiracy happens, you don't need to know that you're involved in one. All you need is two or more people to be wanting the same thing which is to remove me or bar me. So there is conspiracy to get me out of here. Why?",
+        "end": 278100,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 279060,
+        "text": "This is all stuff you can discuss with head office but for now I'm gonna have to ask you to leave the property.",
+        "end": 282900,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 284020,
+        "text": "For what reason now?",
+        "end": 285300,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 285300,
+        "text": "Because you've been barred but why? I'm not at liberty to say. You can discuss it with head office. I've given you their contact information.",
+        "end": 290659,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 291220,
+        "text": "I just. I'm un. That confuses me.",
+        "end": 294660,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 295380,
+        "text": "Sorry about that, but that's all I can say.",
+        "end": 296980,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 296980,
+        "text": "So you've been told to bar me but you don't know why?",
+        "end": 299140,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 299460,
+        "text": "I do know why. I'm not at liberty to say why.",
+        "end": 301700,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 304340,
+        "text": "So now it's the weekend the officer's gonn be shut. So I'm left with this looming uncertainty for no reason, acted in good faith constantly. I will send all the letters in that have made most of the people. And you can't just give me a reasonable.",
+        "end": 319600,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 320000,
+        "text": "Not me, Palestina, Head office.",
+        "end": 321680,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 322239,
+        "text": "Well, can. Can someone else that's in the building. Cuz I will take this as well. I'll do it as a public interest. Then I won't speak to head office. I'll make a public forum and I'll put everything there. I must speak about it publicly. Cuz what I don't like is cuz I've got autism. People take advantage of that and they like to corner me and have one to one. But I don't work like that, you see, cuz I'm a private investigator so I act in the public's interest. So if you're not going to tell me in front of a witness who I helped. Did I help you that night? No, not really.",
+        "end": 351390,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 351390,
+        "text": "But I found something. I went just, you see, with me. I'm just. I think it all went wrong. It wasn't communication wasn't there. But then when I came back they said I still had four days left. Yeah. So I just said, you know something, I'm just who I am. I just let it pass.",
+        "end": 369750,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 369750,
+        "text": "But I was upset.",
+        "end": 370630,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 370630,
+        "text": "That's not my days.",
+        "end": 371470,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 371470,
+        "text": "Yeah, but you had to leave, didn't you?",
+        "end": 373790,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 375310,
+        "text": "It was a mistake that they made. I mean it wasn't properly.",
+        "end": 378430,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 380910,
+        "text": "Said, you.",
+        "end": 381990,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 381990,
+        "text": "Know, I mean directly and you know what I mean. Because I didn't know I had the 14 days that after the 14 days. Bye bye. But then when I came back they said that you had. You still have the full day. So I took the two, which I was happy to take it. And then I've got my last two which is rise between Monday which I'm.",
+        "end": 399620,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 399620,
+        "text": "Happy but that didn't exist.",
+        "end": 401700,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 401700,
+        "text": "You need to find like alternative accommodation. Please come to us. There's plenty of other places we can help you find.",
+        "end": 405980,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 405980,
+        "text": "Yeah, as I said before I leave on the Monday, I would like to.",
+        "end": 408860,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 409020,
+        "text": "Yeah, just come find us.",
+        "end": 410380,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 411740,
+        "text": "But this is the thing but you only got that space because I spoke to the member of staff when you left and said that's not right.",
+        "end": 418700,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 418700,
+        "text": "I think again, it was a, A miscommunication.",
+        "end": 421220,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 422660,
+        "text": "But you still. Which is fine, but you still ended up on the street. And I had a word and said, that's not right. He's 62. My mom's 62. Would you do it to your dad? He said no. Said, why have you just done it to him?",
+        "end": 433460,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 433780,
+        "text": "When I came back, they realized that.",
+        "end": 435860,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 436179,
+        "text": "There was a mistake because I told them.",
+        "end": 437820,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 437820,
+        "text": "Yeah, well, there was a mistake.",
+        "end": 439100,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 439100,
+        "text": "So I'm barred. I helped him and he gets extra days if he wants it and speak to you. That's target. He still has 14 days.",
+        "end": 447630,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 447950,
+        "text": "But we can find public accommodation.",
+        "end": 449630,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 450190,
+        "text": "But I'm barred from every single pub, love. For what reason?",
+        "end": 453470,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 459790,
+        "text": "Okay, so you're following policy. Yeah. So policy for me is under section 21 and 20 of the Reasonable Adjustment Act. I've got autism. Right. I will obsess badly. If you're not going to tell me. You're going to put me in a very dangerous mindset where I will go ridiculous on forensic stuff and I'll start just posting everything because I can't deal with the ambiguity. It makes me go very strange. It's a registered diagnosis from a psychologist.",
+        "end": 487900,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 490860,
+        "text": "You might still be. If you email the email we sent.",
+        "end": 493099,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 493099,
+        "text": "You can also give me a number.",
+        "end": 494460,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 494780,
+        "text": "Oh, we don't have a number, just the email. Head office doesn't have like a number.",
+        "end": 497740,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 497820,
+        "text": "Head office is not going to answer an email. Can I just have the head. Andy's number?",
+        "end": 503180,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 503740,
+        "text": "I don't even have Andy's number.",
+        "end": 505020,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 509270,
+        "text": "You do everything to email something because.",
+        "end": 511230,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 511230,
+        "text": "To leave me with that sitting over my head, it will drive me insane.",
+        "end": 516230,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 520150,
+        "text": "A lot of the days people stay late.",
+        "end": 521830,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 522310,
+        "text": "Uber addressed to the two.",
+        "end": 523590,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 524470,
+        "text": "Well, that would go to everybody. That would go to Andrew Ben. That would go to everybody in head office. I'll just say.",
+        "end": 529990,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 535750,
+        "text": "I'll, I'll. I will go. Once I sent this email. I.",
+        "end": 539530,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 539530,
+        "text": "Boy, I love.",
+        "end": 540130,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 543010,
+        "text": "That's. That's cruel. I've literally done nothing wrong. What have I done wrong",
+        "end": 549010,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 557250,
+        "text": "in control. Cuz I didn't do Lord, I did fashion. That was my first degree. And since getting diagnosed with autism, I've just noticed people's behavior does change when they know about it, you know, and yeah, and I used to get that nervous and upset and chic. Whereas now I'm really calm and I mean I'm inquisitive and I'm, I can hold the moment. Like he was more nervous than me 100. Like, that's why I'm still sitting here, because I'm not out to get anyone, but I'm certainly not to be bullied either. And I won't let them bully people. I just won't. And I don't let, and I don't let the managers bully them. So it's a, it's a, it's a, It's a catch 22 when. But I just, I'll still be amicable because I'm not out. I don't like keeping hard feelings either. It's like, what's the point? So have you learned from it? Can you, can you see where you went wrong? Cool. Let's move on. Name the harm and move on. Just what's the point? But it's the, it is the vigilante part, which is the autism, where if I don't get an answer, I, I, I, I can't. It's, it's, it's mute the way my brain's wired. I don't like that. No answer because there's no reason not to tell me other than just purposefully. I don't mind what it is because we can deal with it then. But to just withhold it from me sends me west because I am a really honest person. Even if it's bad news, at least you've got the news. And even if the truth is not nice, at least that's all I need to withhold and be sneaky. And.",
+        "end": 655110,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 659510,
+        "text": "So now that's through me now. So I need to figure out where I'm gonna sit you. My.",
+        "end": 662870,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 695610,
+        "text": "That's.",
+        "end": 705450,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 731220,
+        "text": "I've just passed the Judicial Appointment Commission, which is your first stages of submission to be a judge. Okay, So I have different protection actions because judges are picked on good character, good faith, knowing the law, being reasonable, not being bad, all those things to pass. That means I'm a man of reason. I'm not arbitrary. I can name a harm and not hold a grudge. And I had to submit three years of work. So I've got me engaging with police, social workers, family members, members of the public, strangers, mental health patients, because they need to see what you're like in different matters. I've got random people who have helped, who've been in a mental health crisis and have brought them right back to sanity. So you have to send them. There's a Jack framework. It's called so the Judicial Appointment Commissioner's Framework. So you have to be. Have you shown independence of mind so no one swaying your judgments of the truth? So I'VE got. There's a person who I have conflicts of interest with. I served decease and desist letter whereby it wouldn't normally be expected because there's the connection. I don't give a. Are you breaking the law? I'm going to put it to you yet. This is how it should be done. So it went in my favor because I served it. Whereas some people go well you put loyalty first but I put law before loyalty because law is what we all have to follow. It's a rule because we don't then everyone's Nazi. So I put the law before loyalty, not out of spite but like this is just the proper thing to do. Yeah. And so I've submitted it all and I got exceptional for each category and I actually surpassed the standard. I was above it because of the broad range of how I was able to prove all my points because I do computer science. So it wasn't just the I did this. It was a timestamp audio that they can click on and listen to and judge themselves.",
+        "end": 860430,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 864030,
+        "text": "So it's in one line, 50 points. Click on it. Quote, play, listening that. So it's, it's undeniable. When you pass your digital benchmark you get different protections. If someone interferes with you they are now classed as interference with justice because you are doing the job of the law which is to act as a person for the people. If people are having a go at you it can be criminalized because you, you're messing with someone who's doing an important life saving work. So I am in the midst of that. I'm dealing with a case at the moment where a Muslim woman had, was kept in the morgue for 30 days. They meant to be buried in two. Have to be buried under their faith in two days in the morgue for 30 days and had an autopsy against the family's wishes. So I'm helping them at the moment and now I'll have to put that on hold because I'm under attack. I can't even sit in a pub and get a drink of water. So that will come down heavy because judges aren't part of the council or the government. They're independent, they're their own person. They're not part of either. That's the point. So other. So justices have to look after other justices. So when I foot this forward all the judges will have to protect me because they've got to protect the system. So they have to stick together because if they don't stick together so judges can't get condemned for their judgment, it's infallible unless the process was flawed. If they didn't do a step that's in law, they can question the judgment. But if the process was followed, the judgment can't be changed. A judge's statement is final, it can't be undone unless the process was flawed. So if you, someone wasn't interviewed that should have been, you can ask for an appeal and be like, you did that, but you didn't know this. If the process is followed, it's done. That's the point. So I've, I am in that process to be one of them. That's what the judicial process is. You have different types, you have paid tribunal and so on. I, I'm, I want to do the pop up big top ones. That's where I'm headed. Impeded, but now my process is impeded because of this school playground behavior. So that judicial position gets put on hold because I am now responding to arbitrary, non communicative unfair treatment for reasons they can't disclose when let me tell you, as an ICO policy certificate holder, anything they say about, about me belongs to me because you can't talk about someone and then not get that data because it belongs to them as soon as their name's in it. So him refusing, he's refusing to give me my own data even though he said belongs to me because my name's in it, I have a right to see it under Article 6, right to, right to a fair hearing and a right to respond. So he gave me a right to respond. They've left me with it and now I'm upset and they're now making me chase someone to get an answer on something I didn't have any input on. They've made a decision. They've made a decision without informing me. If they're gonna borrow me, they need to tell me why.",
+        "end": 1074350,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1078510,
+        "text": "And my numbers there.",
+        "end": 1079630,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1079710,
+        "text": "Yeah, because when they send the email.",
+        "end": 1081110,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 1081110,
+        "text": "Up to you, they Got me email1 used to email me and the staff have got me number. So targeted behavior, they know something or are making something up and choosing outright not to communicate with them. That's malicious targeted behavior with intent not to make me happy, to dismantle me or cause me upset for what reason I don't know. And this is what I would have to tell the judicial panel. You've got to sound reasonable person who's been judged on three years of his work, random, planned and specific and not once if I stepped out of line. So why would all of a sudden do it now?",
+        "end": 1122270,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1127310,
+        "text": "It's just unbelievable. I don't know whether they don't believe me or the memory is very short or I just don't know. But they're going to get the shock, the lives when I send this message, because I'm not joking. I have done them video for some. Someone weed on me door here. I couldn't get in the room, right? And I was like. And then I couldn't get downstairs because I was sitting on the stairs vomiting, right? So I'm stuck at 4am on the stairs, knackered, dealing with court cases. Told the member of staff here, you know, didn't do anything. I didn't complain. I just said to Kat, listen, you're gonna have to sort upstairs. I haven't been to bed. I couldn't get in my room because someone was weeing on my door and she was just, oh, my God. So then I just went somewhere else for two days. Then when I come back, I booked a room and she was like, oh, that's the 20 pound 30, please. I went, is it right if we just, like, swap it for the day? I didn't sleep. And she's like, no. I was like, But I never used the room because the man was weeing on my door. She was like, yeah, I can't. You're gonna get me into trouble. I went, but I paid for a room that I couldn't use. I just want to go to bed. And she was like, huffing and ring and Tottenham. And I was like, I didn't complain about this. I just want to go to bed. I was like, a man was weeing on my door. I couldn't enter the room. I'm sorry, I didn't sleep. Can I just take that night I paid for and just go to bed half an hour later, right, I've just sorted that. She was like, but I can't be doing this all the time. Not, sorry, Ben, that someone was weeing on the door when you wanted to go to your room. It's like someone was pissing on me door, vomiting on the stairs. I could have posted it all over Facebook, but no, what did I do? Made some nice pictures to make it not hamper the place, because it's a nice place. But the staff are just relentless.",
+        "end": 1244910,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1254590,
+        "text": "Very organized. I've got three businesses. I deal with internationals, multiple languages, multiple cultures, multiple currencies, multiple time zones. And it gets ruined because, like, this comes at me and I have to deal with it and it's like. And then that gets damaged and they have to fix and it's just a knock on effect on everything.",
+        "end": 1279480,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1288520,
+        "text": "Especially because I haven't even done it in one. And I'm. I don't feel comfortable now because they've been out there waiting for me to go. It's like you haven't told me why. I now need to message someone. And say what? Why are you doing? It's a lot. It's a lot.",
+        "end": 1302740,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1308020,
+        "text": "So sorry about this. You did not need this at all. If they would have just pulled me in, you would never have known any of this. You didn't need to know. This is not. This is not for you. You know what I mean? Just weird.",
+        "end": 1318240,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1322240,
+        "text": "I'm just see some gentleman there having his drink. He just need to know all this. It's not your business. Not your business.",
+        "end": 1331280,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1334960,
+        "text": "And they're acting noble letting you stay. That's because of me. I said to them, get that man back here. Because what you have done is criminal. What you have done is criminal. But this is what I'm saying. So I highlighted criminal behavior which is, you know, it's illegal to make someone homeless. Just letting you know it's illegal. The law says you can't make someone homeless. You were homeless. Technically for that night. You had nowhere to stay and you weren't allowed to stay here. And you were sent out at 4am.",
+        "end": 1367960,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1367960,
+        "text": "Still had the money.",
+        "end": 1368540,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 1371330,
+        "text": "So they denied you them when you actually had them.",
+        "end": 1373730,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1392610,
+        "text": "So what they've done is because they nearly got away with it with you because I've said so. Another target of me. Which let them. Because I'll just take it to the judicial and. And speak and tell the High Court because that's the only. That's the only thing I can rely upon. I'm sorry, I was just talking to Alderman.",
+        "end": 1414010,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1418250,
+        "text": "So just that means just to confirm, you know, I've got autism. You know it's going to send me into a dangerous frenzy that will probably end up online and. And you still won't tell me the reason in front of this gentleman that you couldn't have told me inside privately. So you'd agree and that's what you did.",
+        "end": 1435470,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1437470,
+        "text": "There's nothing I did. It's something I didn't. I'm confused with the questions.",
+        "end": 1441710,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 1441710,
+        "text": "So just to be clear. Yeah. You're refusing to tell me why, which could solve everything because at least I know what I'm defending. But the thing is, as you are, because it's data about me and you can't withhold information about me because it's about me in impacting my life. That what you say about me I have a right to know. Article 6. I have a right to respond. So we won't even speak to me arbitrary behavior.",
+        "end": 1467729,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1475090,
+        "text": "You're so sorry about this. Again, this is not your fault. Okay? There's absolutely nothing to do with you.",
+        "end": 1478960,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1485920,
+        "text": "Of the shock because of. The reason why I left is me brother died. So I had a funeral two weeks ago, which they know about. So that makes me more vulnerable. So to throw this on me, it just brings me. It just dislodges everything. And I don't know what I'm doing. So I feel a bit confused. I don't know what I need to do. And my phone's cut off, so I don't know where I'm gonna navigate. So. But I just need to try and.",
+        "end": 1511320,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1515400,
+        "text": "Bug her off.",
+        "end": 1516280,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1520120,
+        "text": "Good. Get in the cab. So I'm talking about the over there. Talk about his wife like that. What? Your wife? No way. Just escape from Eden, for God's sake. From Eden or Egypt? Have you been with them all day?",
+        "end": 1543160,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1543560,
+        "text": "No, I just beat them over there.",
+        "end": 1545160,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 1550360,
+        "text": "The heavens have sent you an angel. You save. On whose merits? Probably his.",
+        "end": 1557410,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1557570,
+        "text": "I don't like beating up.",
+        "end": 1558930,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 1559650,
+        "text": "I haven't beaten you up. I haven't even touched you. Not yet. I just touch you.",
+        "end": 1563810,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1567570,
+        "text": "You just need to get yourself a solid witness. You'll be fine. You. This guy is. Do you know who he is?",
+        "end": 1576690,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1579730,
+        "text": "Just use Article 3. You'll have right to remain for free. Keep going.",
+        "end": 1583580,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1583820,
+        "text": "I'm gonna take your house. Everything you got.",
+        "end": 1586140,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 1587180,
+        "text": "Really.",
+        "end": 1587580,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1587580,
+        "text": "I know you don't have a car.",
+        "end": 1588860,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 1589340,
+        "text": "See you work for Kia's. Toma. Hello, Kia. Are you okay? Yeah, it's all right. Are you on the dug A boat? Are we sitting next to them?",
+        "end": 1599900,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1599900,
+        "text": "Last week.",
+        "end": 1600460,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 1601340,
+        "text": "Promise you. No. Yes. No. Oh, yeah. Why? That's for me to know and me to report. Of course you left. You're a bit of a lefty now. I make my own economy.",
+        "end": 1615040,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1619280,
+        "text": "Make me an old economy. Aye, I got you there. But sitting next to him. Red car. Yeah. He crossed me. He crossed you? Are you cross with me? Oh, should I be a show? I'm not gay. Yes, but I am very cross with you. Cross? Yes. Cross angry. Very cross, yes. Why? Because you said I should be.",
+        "end": 1645130,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1648730,
+        "text": "Got a bit of rationale on it. Rational? Yes, rationale.",
+        "end": 1654490,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1657690,
+        "text": "My girlfriend is 10 years older than me. The poor thing. Bless her. She'll come to her senses.",
+        "end": 1663780,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1666980,
+        "text": "Oh, no. She'll come to a senses.",
+        "end": 1668820,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1702030,
+        "text": "What's his name? What's his name? Who? What's his name? Whose name? Your boy. I'm talking to my mother.",
+        "end": 1712360,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1716040,
+        "text": "There we go.",
+        "end": 1716840,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1787910,
+        "text": "It's",
+        "end": 1803510,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 1813440,
+        "text": "it.",
+        "end": 1813680,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 1840890,
+        "text": "You can go so far. Unlucky. Oh.",
+        "end": 1845370,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1864500,
+        "text": "It'S.",
+        "end": 1879540,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 1902910,
+        "text": "Oh, light.",
+        "end": 1903550,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1915560,
+        "text": "It.",
+        "end": 1915800,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 1941010,
+        "text": "Like.",
+        "end": 1941250,
+        "speaker": "Zack White ferry pub",
+        "participant_id": "80d30036-88ab-4b90-88d2-63a690c5eecf"
+      },
+      {
+        "start": 1943090,
+        "text": "Well kind of.",
+        "end": 1943970,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 1966620,
+        "text": "It's,",
+        "end": 1982140,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2196310,
+        "text": "it's, it's,",
+        "end": 2232640,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2247450,
+        "text": "it's,",
+        "end": 2269450,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2400630,
+        "text": "it's",
+        "end": 2424230,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2451690,
+        "text": "it",
+        "end": 2451930,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2477540,
+        "text": "that.",
+        "end": 2477780,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2654400,
+        "text": "I'll tell him you say goodbye.",
+        "end": 2655680,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 2655680,
+        "text": "Right. That's",
+        "end": 2676810,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2758050,
+        "text": "Italia.",
+        "end": 2783090,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2785740,
+        "text": "Because you're healthy and fit, you see. Fit as fiddle, you know. I'm nearly done now. That's just because I've got to keep the Internet going, isn't it?",
+        "end": 2792060,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 2809590,
+        "text": "Cut.",
+        "end": 2809830,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2952839,
+        "text": "It's nice and safe. Yeah.",
+        "end": 2954560,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 2954560,
+        "text": "What I'm going to do, the soap that I use in the hotel, it's got a nice smell.",
+        "end": 2958600,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 2958920,
+        "text": "Oh yeah.",
+        "end": 2959480,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 2959480,
+        "text": "Basically I've got to do is try to get some pan points.",
+        "end": 2962530,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 2963970,
+        "text": "Oh the, the. The laundress have loads. You should ask them, you know, if you're there tomorrow. Yeah, I'm there tomorrow.",
+        "end": 2968770,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 2968770,
+        "text": "Oh, you there?",
+        "end": 2969410,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 2969410,
+        "text": "Yeah, cuz I'm doing some work for.",
+        "end": 2970570,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 2970570,
+        "text": "Them so I'm going to shove my in there man.",
+        "end": 2972090,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 2972090,
+        "text": "Wash it.",
+        "end": 2972490,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 2972490,
+        "text": "Oh, it's brilliant. They do the pods, they do the fabric softener, they do everything.",
+        "end": 2975730,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 2976050,
+        "text": "These are the work stuff.",
+        "end": 2977090,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 2978209,
+        "text": "Only a pound for the liquids and the powder and then it's brilliant. Best wash about. Yeah, it's brilliant. But, but if you give, if you go with your card, you can tap your card and they'll give you pounds.",
+        "end": 2987670,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 2988060,
+        "text": "How is it?",
+        "end": 2988780,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 2989340,
+        "text": "They're decent like. They're amazing.",
+        "end": 2990700,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 2990700,
+        "text": "Even better.",
+        "end": 2991260,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 2992540,
+        "text": "Or if you've got slummy, they'll swap it and give you pounds. They're really good. Yeah. Open to eight.",
+        "end": 2999980,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3002380,
+        "text": "Shower all my together. My shaving gel, shaver, everything's in there. Double pants, I've got socks, my slippers which I'm gonna have to wear out here anyway.",
+        "end": 3013910,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3014470,
+        "text": "Hot.",
+        "end": 3014870,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 3017110,
+        "text": "I don't think I want. It's in that bag.",
+        "end": 3019270,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3020070,
+        "text": "Hey, what you doing here? Andrew?",
+        "end": 3021430,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3021430,
+        "text": "Come back to work.",
+        "end": 3022230,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3027510,
+        "text": "I'll probably go to Elephant and Castle cuz it's like it's. It's got loads of space. It's somewhere I can just work without being harassed. That's all I want. I just want to do me work man. That's all I need.",
+        "end": 3038790,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3039360,
+        "text": "Just.",
+        "end": 3039520,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 3039520,
+        "text": "Just to do me work. I don't bother anyone, even speak.",
+        "end": 3041920,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3045280,
+        "text": "So yeah,",
+        "end": 3045920,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3051040,
+        "text": "yeah, I'm trying to figure out what way I have to get the bus. I think it's. Oh, it'll be that one. Cuz that's when you come back from Elephants and Castle, isn't it? Elven Castle Going to be that way, isn't it? Let's see. You sure?",
+        "end": 3071120,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3072720,
+        "text": "Cuz Canary Wolf got a bit of a supply.",
+        "end": 3076480,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3080320,
+        "text": "Yeah, go the opposite way.",
+        "end": 3081600,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3081680,
+        "text": "That way.",
+        "end": 3082240,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 3084320,
+        "text": "Soon there is but coming.",
+        "end": 3087200,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3093530,
+        "text": "So that's the bus stop",
+        "end": 3094490,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3102410,
+        "text": "because that's when you. That's when I arrive. I get dropped.",
+        "end": 3104570,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3104570,
+        "text": "I think that's canary Wolf.",
+        "end": 3106010,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3106330,
+        "text": "Yeah, yeah, yeah, yeah, yeah, yeah, yeah. This is coming in.",
+        "end": 3109290,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3110010,
+        "text": "That's what I was thinking. That's what I was looking.",
+        "end": 3111610,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3112490,
+        "text": "Wait, what does it say on that? Buster.",
+        "end": 3114170,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3118020,
+        "text": "That's where I need to go. Yeah, yeah.",
+        "end": 3119780,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3119780,
+        "text": "So it's Zumba, Jeff.",
+        "end": 3132580,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 3143630,
+        "text": "See when the next one's true. I mean it is quite lucky. It's just being there. Thank God at least whoever's laughing up there.",
+        "end": 3151150,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3168120,
+        "text": "Bus.",
+        "end": 3168360,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3169880,
+        "text": "Yes.",
+        "end": 3170240,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 3170240,
+        "text": "It didn't take long, didn't it for me to get down and come back.",
+        "end": 3172440,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3172520,
+        "text": "That's all.",
+        "end": 3173240,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3174440,
+        "text": "I see two women and then they tell me the best way to get to St. James's Park.",
+        "end": 3178480,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3178480,
+        "text": "I said I work a lot.",
+        "end": 3179320,
+        "speaker": "62 Year old Man",
+        "participant_id": "ce6c4e04-8a93-45af-87d3-f404d2658369"
+      },
+      {
+        "start": 3181560,
+        "text": "About that decorate. I says wow. She goes, how long would it take? How long did it take to go there? Now if I walk with you slowly, I'll guide you so far. Cuz I'm a marshal. I said I'll walk, you know. So I said when you get across here go stay on your left. Then you're going to see building site. You're going to see a lot of these metal bollards. I said turn left down and walk down it. St. James's Park Station.",
+        "end": 3209090,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3209970,
+        "text": "Thank you.",
+        "end": 3210610,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 3212370,
+        "text": "Yeah, I see 10. When is that",
+        "end": 3213810,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3220300,
+        "text": "that same K. Oh, don't tell me it's that one. This is saying K.",
+        "end": 3225260,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3231260,
+        "text": "I know. Oh no, no, that's right. Yeah. So yeah, I was. Yeah, yeah. I just need to go there. Oh no, but okay that's saying Kayla.",
+        "end": 3242940,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3244950,
+        "text": "The trouble the same way, don't they but it turn off.",
+        "end": 3246870,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3250870,
+        "text": "So that's saying K ealing. That can't be right. What the going on there sending me west. I know we need to get the. I just need to get the seat. And I just don't know which one. If it's that one. Is that. Did I say towards Victoria? It's looking that way. Oh yeah, we just said that, haven't we? Yeah. So I. But that says Victoria and I need to go because when I come in I come past. I don't know what's going on. Let's see what this.",
+        "end": 3279470,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3295000,
+        "text": "It.",
+        "end": 3295240,
+        "speaker": "Speaker 5",
+        "participant_id": null
+      },
+      {
+        "start": 3341490,
+        "text": "That one? Yeah.",
+        "end": 3342210,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3350620,
+        "text": "There's more. Can you see one?",
+        "end": 3351900,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3351900,
+        "text": "Yeah.",
+        "end": 3352180,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3352180,
+        "text": "Oh what the bus. I mean don't I need to. Okay.",
+        "end": 3357100,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3359260,
+        "text": "Oh, you bastard.",
+        "end": 3360060,
+        "speaker": "Speaker 6",
+        "participant_id": null
+      },
+      {
+        "start": 3360060,
+        "text": "You bastard. You bastard. Oh, I need to get it. I need to get it.",
+        "end": 3365180,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3368860,
+        "text": "I've just got to use the Internet.",
+        "end": 3370140,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3382390,
+        "text": "Let's see if that stays there for two seconds. Oh, let's see if he'll stay there. I'll see you later.",
+        "end": 3389750,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      },
+      {
+        "start": 3398640,
+        "text": "I'm so sorry. Thank you. Oh, sorry. Sometime.",
+        "end": 3402320,
+        "speaker": "Ben Mak",
+        "participant_id": "2c1612e8-92e8-4df3-8bd5-8371088f217d"
+      }
+    ]
+  ],
+  "audioFiles": [],
+  "errors": []
+}

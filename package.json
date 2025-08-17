@@ -6,7 +6,10 @@
   "scripts": {
     "setup-db": "node setup_supabase_behavior_assessment.js",
     "upload": "node upload_to_supabase.js",
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "process-grain": "node grain_api_client.js",
+    "integrate-grain": "node integrate_grain_recordings.js",
+    "full-setup": "npm run integrate-grain && npm run setup-db && npm run upload"
   },
   "keywords": [
     "behavior",
